@@ -1,0 +1,37 @@
+/* list of persons */
+.userphoto, .userpic{
+	border-radius:25px;
+	width:50px;
+	height:50px;
+	float:left;
+	margin-right:15px;
+}
+.userpic{
+	background-color:#1a73c7;
+  	color:#fff;
+  	text-align:center;
+	line-height:53px;
+	font-size:31px;
+}
+.username{
+	color:#313131;
+	font-weight:500;
+	line-height:26px;
+}
+.money{
+	color:#475466;
+	display:block;
+}
+.persons_list .webix_list_item,
+.persons_list .webix_list_item.webix_selected{
+	padding:10px;
+	line-height:20px;
+}
+/* toolbar buttons */
+.toolbar_button button{
+	padding:0;
+	text-align:center;
+}
+.webix_layout_toolbar .webix_el_label.main_label{
+	margin-top:16px !important;
+}

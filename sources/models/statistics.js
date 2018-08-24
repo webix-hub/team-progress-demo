@@ -1,0 +1,22 @@
+export const stats = [
+	{"month":2,"tasks17":27},
+	{"month":4,"tasks18":17},
+	{"month":12,"tasks17":39,"tasks18":25},
+	{"month":23,"tasks18":45},
+	{"month":30,"tasks17":31},
+	{"month":45,"tasks17":93,"tasks18":68},
+	{"month":56,"tasks18":78},
+	{"month":67,"tasks17":33,"tasks18":42},
+	{"month":78,"tasks17":85,"tasks18":68},
+	{"month":89,"tasks17":57},
+	{"month":90,"tasks18":50},
+	{"month":101,"tasks17":53,},
+	{"month":112,"tasks17":78,"tasks18":63},
+	{"month":123,"tasks18":43},
+	{"month":134,"tasks17":38,},
+	{"month":145,"tasks18":63},
+	{"month":156,"tasks17":48,},
+	{"month":153,"tasks18":23},
+	{"month":158,"tasks18":23},
+	{"month":159,"tasks17":28}
+];
