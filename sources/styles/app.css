@@ -35,3 +35,25 @@
 .webix_layout_toolbar .webix_el_label.main_label{
 	margin-top:16px !important;
 }
+/* grid */
+.complete{
+	color:#1CA1C1;
+}
+.incomplete{
+	color:#FF5C4C;
+}
+.tag{
+	border-radius:20px;
+	border: 2px solid rgba(0, 0, 0, 0);
+	font-size:12px;
+	color:#fff;
+}
+.support{
+	background-color:#8664C6;
+}
+.compuhope{
+	background-color:#1CC123;
+}
+.autocat{
+	background-color:#FFC107;
+}

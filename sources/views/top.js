@@ -3,6 +3,9 @@ import ToolView from "views/toolbar";
 import PersonsView from "views/persons";
 import StatisticsView from "views/statistics";
 import TimeDonut from "views/time";
+import ProgressView from "views/progress";
+import TasksView from "views/tasks";
+import CompareView from "views/compare";
 
 export default class TopView extends JetView {
 	config(){
@@ -21,14 +24,14 @@ export default class TopView extends JetView {
 									type:"wide",
 									cols:[
 										TimeDonut,
-										{ template:"progress chart area spline" }
+										ProgressView
 									]
 								},
 								{
 									type:"wide",
 									cols:[
-										{ template:"direction datatable" },
-										{ template:"compare bar chart" }
+										TasksView,
+										CompareView
 									]
 								}
 							]

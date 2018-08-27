@@ -1,26 +1,33 @@
 import {JetView} from "webix-jet";
+import {hours} from "models/time";
 
 export default class TimeDonut extends JetView {
 	config(){
 		return {
-			view:"chart",
-			type:"donut",
-			value:"#sales#",
-			color:"#color#",
-			innerRadius:65,
-			shadow:0,
-			legend:{
-				width: 75,
-				align:"right",
-				valign:"middle",
-				template:"#month#"
-			},
-			data:[
-				{ sales:"20", month:"Call", color: "#8664C6" },
-				{ sales:"30", month:"Mail", color: "#1CA1C1" },
-				{ sales:"50", month:"Meeting", color: "#FDBF4C" },
-				{ sales:"40", month:"Proposal", color: "#F8643F" }
+			type:"clean", rows:[
+				{ template:"Hours spent", type:"header" },
+				{
+					localId:"hours",
+					view:"chart",
+					type:"donut",
+					value:"#hours#",
+					color:"#color#",
+					innerRadius:65,
+					shadow:0,
+					legend:{
+						width:100,
+						align:"right",
+						valign:"top",
+						template:"#activity#"
+					},
+					padding:{
+						top:0, bottom:16
+					}
+				}
 			]
 		};
+	}
+	init(){
+		this.$$("hours").parse(hours);
 	}
 }

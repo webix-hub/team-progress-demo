@@ -4,41 +4,65 @@ import {stats} from "models/statistics";
 export default class StatisticsView extends JetView{
 	config(){
 		return {
-			view:"chart",
-			type:"scatter",
-			xValue:"#month#",
-			xAxis:{
-				start:0,
-				end:160,
-				step:10
-			},
-			yAxis:{
-				start:0,
-				step:20,
-				end:100
-			},
-			series:[
+			type:"clean", rows:[
+				{ template:"Tasks completed", type:"header" },
 				{
-					value:"#tasks17#",
-					disableLines:false,
-					item:{
-						borderColor:"#1CA1C1", borderWidth:2,
-						radius:4
+					localId:"stats",
+					view:"chart",
+					type:"scatter",
+					xValue:"#week#",
+					padding:{
+						top:14
 					},
-					line:{ color:"#1CA1C1", width:2 }
-				},
-				{
-					value:"#tasks18#",
-					item:{
-						borderColor:"#8664C6", borderWidth:2,
-						radius:4
+					xAxis:{
+						start:0,
+						end:53,
+						step:2,
+						title:"Weeks"
 					},
-					line:{ color:"#8664C6", width:2 }
+					yAxis:{
+						start:0,
+						step:25,
+						end:100,
+						title:"Tasks"
+					},
+					legend:{
+						values:[
+							{text:"2017", color:"#8664C6"},
+							{text:"2018", color:"#1CA1C1"}
+						],
+						align:"right", layout:"x", valign:"top"
+					},
+					series:[
+						{
+							value:"#tasks17#",
+							disableLines:false,
+							item:{
+								borderColor:"#1CA1C1", borderWidth:2,
+								radius:4
+							},
+							line:{ color:"#1CA1C1", width:2 },
+							tooltip:{
+								template:"Week #week#<br>#tasks17# tasks completed"
+							}
+						},
+						{
+							value:"#tasks18#",
+							item:{
+								borderColor:"#8664C6", borderWidth:2,
+								radius:4
+							},
+							line:{ color:"#8664C6", width:2 },
+							tooltip:{
+								template:"Week #week#<br>#tasks18# tasks completed"
+							}
+						}
+					]
 				}
 			]
 		};
 	}
-	init(view){
-		view.parse(stats);
+	init(){
+		this.$$("stats").parse(stats);
 	}
 }
