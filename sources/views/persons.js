@@ -8,25 +8,22 @@ export default class PersonsView extends JetView {
 				{
 					view:"toolbar", elements:[
 						{ view:"label", label:"Persons" },
+						{},
 						{
-							view:"text", localId:"search", hidden:true,
-							on:{
-								onBlur(){ this.hide(); },
-								onTimedKeyPress(){
-									const input = this.getValue().toLowerCase();
-									this.$scope.$$("list").filter(obj => {
-										const name = obj.fname + " " + obj.lname;
-										return name.toLowerCase().indexOf(input) !== -1;
-									});
-								}
-							}
-						},
-						{
-							view:"button", type:"icon", icon:"magnify",
+							view:"button", type:"icon", icon:"arrow-down",
 							width:37, css:"toolbar_button",
-							click:() => {
-								this.$$("search").show();
-								this.$$("search").focus();
+							click:function(){
+								let dir = "";
+								if (this.config.icon.indexOf("down") !== -1){
+									dir = "desc";
+									this.config.icon = "arrow-up";
+								}
+								else {
+									dir = "asc";
+									this.config.icon = "arrow-down";
+								}
+								this.$scope.$$("list").sort("fname",dir);
+								this.refresh();
 							}
 						}
 					]

@@ -17,10 +17,13 @@ export default class TimeDonut extends JetView {
 						width:100,
 						align:"right",
 						valign:"middle",
-						template:"#activity#"
+						template:"#activity#",
+						marker:{
+							type:"round", width:8, height:9
+						}
 					},
 					padding:{
-						top:0, bottom:16
+						top:10, bottom:20
 					}
 				}
 			]

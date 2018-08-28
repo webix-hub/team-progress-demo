@@ -6,19 +6,33 @@ export default class ToolView extends JetView{
 			view:"toolbar", height:70,
 			elements:[
 				{
-					view:"label", template:"Team Progress", width:200
+					view:"label", template:"Team Progress", width:200, css:"main_label"
 				},
 				{ 
 					view:"button", type:"form", icon:"plus",
-					label:"Add a task", width:200,
-					click:()=>{
+					label:"Add a task", width:160,
+					click:() => {
 						// add a task to the grid
 					}
 				},
 				{},
 				{
+					localId:"search", hidden:true, margin:0,
+					cols:[
+						{ view:"text" },
+						{
+							view:"button", type:"icon", icon:"close",
+							css:"toolbar_button close", width:40, click: () => {
+								this.$$("search").hide();
+							}
+						}
+					]
+				},
+				{
 					view:"button", type:"icon", css:"toolbar_button",
-					icon:"magnify", width:40
+					icon:"magnify", width:40, click:() => {
+						this.$$("search").show();
+					}
 				},
 				{
 					view:"button", type:"icon", css:"toolbar_button",

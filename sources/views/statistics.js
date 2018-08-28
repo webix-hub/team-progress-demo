@@ -15,21 +15,21 @@ export default class StatisticsView extends JetView{
 						top:10
 					},
 					xAxis:{
-						start:0,
-						end:53,
-						step:2
+						start:0, end:53, step:2, lines:false
 					},
 					yAxis:{
-						start:0,
-						step:25,
-						end:100
+						start:0, step:25, end:100
 					},
 					legend:{
 						values:[
-							{text:"2017", color:"#8664C6"},
-							{text:"2018", color:"#1CA1C1"}
+							{ text:"2017", color:"#8664C6" },
+							{ text:"2018", color:"#1CA1C1" }
 						],
-						align:"right", layout:"x", valign:"bottom"
+						align:"right", layout:"x", valign:"bottom",
+						margin:1, padding:10,
+						marker:{
+							type:"round", width:8, height:9
+						}
 					},
 					series:[
 						{

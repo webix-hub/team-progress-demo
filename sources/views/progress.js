@@ -17,16 +17,10 @@ export default class ProgressView extends JetView {
 						width:3
 					},
 					xAxis:{
-						template:"#week#"
+						template:"#week#", lines:false
 					},
 					yAxis:{
 						start:0, end:100, step:20
-					},
-					legend:{
-						values:[
-							{ text:"", color:"#1CA1C1" }
-						],
-						align:"right", layout:"x", valign:"bottom"
 					},
 					tooltip:{
 						template:"Week #week#<br>#tasks# tasks completed"
@@ -51,7 +45,10 @@ export default class ProgressView extends JetView {
 			values:[
 				{text:name, color:"#1CA1C1"}
 			],
-			align:"right", layout:"x", valign:"bottom"
+			align:"right", layout:"x", valign:"bottom", margin:1, padding:10,
+			marker:{
+				type:"round", width:8, height:9
+			}
 		});
 		chart.refresh();
 	}

@@ -13,7 +13,7 @@ export default class TopView extends JetView {
 			rows:[
 				ToolView,
 				{
-					type:"space",
+					type:"space", paddingX:0,
 					cols:[
 						PersonsView,
 						{

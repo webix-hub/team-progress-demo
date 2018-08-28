@@ -8,7 +8,6 @@ export default class TasksView extends JetView {
 			view:"datatable",
 			gravity:2,
 			select:"multiselect",
-			editable:true,
 			columns:[
 				{
 					id:"status", width:40, header:"", sort:"int",
@@ -26,7 +25,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:"User",
-					collection:persons, sort:"text", editor:"select"
+					collection:persons, sort:"text"
 				},
 				{
 					id:"start", fillspace:1, format:webix.Date.dateToStr("%d %M %y"),

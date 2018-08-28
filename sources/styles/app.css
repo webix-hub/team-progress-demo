@@ -32,6 +32,15 @@
 	padding:0;
 	text-align:center;
 }
+.toolbar_button.close button{
+	background-color:rgba(255, 91, 76, 0.671);
+}
+.toolbar_button.close button:hover{
+	background-color:rgba(255, 91, 76, 0.548);
+}
+.webix_el_label.main_label{
+	line-height: 54px;
+}
 /* grid */
 .complete{
 	color:#1CA1C1;
@@ -53,4 +62,8 @@
 }
 .autocat{
 	background-color:#FFC107;
+}
+/* headers (templates) */
+.webix_header{
+	text-align: center;
 }
