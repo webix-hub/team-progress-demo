@@ -17,7 +17,7 @@ export default class TimeDonut extends JetView {
 					legend:{
 						width:100,
 						align:"right",
-						valign:"top",
+						valign:"middle",
 						template:"#activity#"
 					},
 					padding:{

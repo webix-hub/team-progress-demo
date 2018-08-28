@@ -55,7 +55,7 @@ export default class PersonsView extends JetView {
 					on:{
 						onAfterSelect:(id) => {
 							const person = persons.getItem(id);
-							this.app.callEvent("person:select",[person]);
+							this.app.callEvent("person:select",[person.value,person.progress]);
 						}
 					}
 				}
@@ -63,6 +63,10 @@ export default class PersonsView extends JetView {
 		};
 	}
 	init(){
-		this.$$("list").parse(persons);
+		const list = this.$$("list");
+		persons.waitData.then(() => {
+			list.parse(persons);
+			list.select(list.getFirstId());
+		});
 	}
 }

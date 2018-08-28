@@ -1,49 +1,58 @@
 import {JetView} from "webix-jet";
+import {projects} from "models/projects";
 
 export default class CompareView extends JetView {
 	config(){
 		return {
-			view:"chart",
-			type:"barH",
-			yAxis:{
-				template:"'#year#"
-			},
-			xAxis:{
-				start:0,
-				step:10,
-				end:100
-			},
-			legend:{
-				values:[
-					{text:"Type A",color:"#58dccd"},
-					{text:"Type B",color:"#a7ee70"}
-				],
-				valign:"middle",
-				align:"right",
-				width:90
-			},
-			series:[
+			type:"clean", rows:[
+				{ template:"Total tasks by projects", type:"header" },
 				{
-					value:"#sales#",
-					color: "#58dccd",
-					tooltip:{
-						template:"#sales#"
-					}
-				},
-				{
-					value:"#sales2#",
-					color:"#a7ee70",
-					tooltip:{
-						template:"#sales2#"
-					}
+					localId:"chart",
+					view:"chart",
+					type:"barH",
+					radius:0,
+					barWidth:20,
+					yAxis:{
+						template:"#project#",
+						title:"Project"
+					},
+					xAxis:{
+						start:0,
+						step:15,
+						end:90,
+						title:"Tasks"
+					},
+					legend:{
+						values:[
+							{text:"2017",color:"#8664C6"},
+							{text:"2018",color:"#1CA1C1"}
+						],
+						valign:"top",
+						align:"right",
+						layout:"x"
+					},
+					series:[
+						{
+							value:"#tasks17#",
+							color:"#8664C6",
+							tooltip:{
+								template:"#tasks17#"
+							}
+						},
+						{
+							value:"#tasks18#",
+							color:"#1CA1C1",
+							tooltip:{
+								template:"#tasks18#"
+							}
+						}
+					],
+					padding:{ left:100, top:16 }
 				}
-			],
-			data:[
-				{ sales:"20", sales2:"35", year:"02" },
-				{ sales:"40", sales2:"24", year:"03" },
-				{ sales:"44", sales2:"20", year:"04" },
-				{ sales:"23", sales2:"50", year:"05" }
 			]
 		};
+	}
+	init(){
+		this.$$("chart").parse(projects);
 	}
 }

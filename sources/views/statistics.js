@@ -5,7 +5,7 @@ export default class StatisticsView extends JetView{
 	config(){
 		return {
 			type:"clean", rows:[
-				{ template:"Tasks completed", type:"header" },
+				{ template:"Total tasks completed", type:"header" },
 				{
 					localId:"stats",
 					view:"chart",
