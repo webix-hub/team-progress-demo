@@ -6,14 +6,14 @@ export default class ToolView extends JetView{
 			view:"toolbar", height:70,
 			elements:[
 				{
-					view:"label", template:"Team Progress", width:200,
-					css:"main_label"
+					view:"label", template:"Team Progress", width:200
 				},
 				{ 
-					view:"button", type:"iconButton", icon:"plus",
-					label:"Add person", width:140,
-					height:40,
-					click:()=>{}
+					view:"button", type:"form", icon:"plus",
+					label:"Add a task", width:200,
+					click:()=>{
+						// add a task to the grid
+					}
 				},
 				{},
 				{

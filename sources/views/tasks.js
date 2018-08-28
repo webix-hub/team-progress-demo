@@ -7,7 +7,8 @@ export default class TasksView extends JetView {
 		return {
 			view:"datatable",
 			gravity:2,
-			select:true,
+			select:"multiselect",
+			editable:true,
 			columns:[
 				{
 					id:"status", width:40, header:"", sort:"int",
@@ -25,7 +26,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:"User",
-					collection:persons, sort:"text"
+					collection:persons, sort:"text", editor:"select"
 				},
 				{
 					id:"start", fillspace:1, format:webix.Date.dateToStr("%d %M %y"),
@@ -40,10 +41,22 @@ export default class TasksView extends JetView {
 						else return format(obj.end);
 					}
 				}
-			]
+			],
+			on:{
+				onAfterSelect:row => {
+					const user = this.getRoot().getItem(row.id).user;
+					this.app.callEvent("task:select",[user]);
+				}
+			}
 		};
 	}
 	init(view){
-		view.parse(tasks);
+		view.sync(tasks);
+
+		this.on(this.app,"person:select",(name,pr,id) => {
+			let res = tasks.find((obj) => id == obj.user);
+			view.select(res[0].id);
+			view.showItem(res[0].id);	  
+		});
 	}
 }

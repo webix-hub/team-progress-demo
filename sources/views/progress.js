@@ -3,7 +3,8 @@ import {JetView} from "webix-jet";
 export default class ProgressView extends JetView {
 	config(){
 		return {
-			type:"clean", gravity:2, rows:[
+			type:"clean", gravity:2,
+			rows:[
 				{ template:"Individual employee's progress", type:"header" },
 				{
 					view:"chart",
@@ -12,27 +13,26 @@ export default class ProgressView extends JetView {
 					value:"#tasks#",
 					color:"#1CA1C1",
 					alpha:0.1,
+					line:{
+						width:3
+					},
 					xAxis:{
-						template:"#week#",
-						title:"Weeks"
+						template:"#week#"
 					},
 					yAxis:{
-						start:0,
-						end:100,
-						step:20,
-						title:"Tasks"
+						start:0, end:100, step:20
 					},
 					legend:{
 						values:[
-							{text:"", color:"#1CA1C1"}
+							{ text:"", color:"#1CA1C1" }
 						],
-						align:"right", layout:"x", valign:"top"
+						align:"right", layout:"x", valign:"bottom"
 					},
 					tooltip:{
 						template:"Week #week#<br>#tasks# tasks completed"
 					},
 					padding:{
-						top:16
+						top:10
 					}
 				}
 			]
@@ -51,7 +51,7 @@ export default class ProgressView extends JetView {
 			values:[
 				{text:name, color:"#1CA1C1"}
 			],
-			align:"right", layout:"x", valign:"top"
+			align:"right", layout:"x", valign:"bottom"
 		});
 		chart.refresh();
 	}

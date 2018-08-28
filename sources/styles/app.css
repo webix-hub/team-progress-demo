@@ -32,9 +32,6 @@
 	padding:0;
 	text-align:center;
 }
-.webix_layout_toolbar .webix_el_label.main_label{
-	margin-top:16px !important;
-}
 /* grid */
 .complete{
 	color:#1CA1C1;

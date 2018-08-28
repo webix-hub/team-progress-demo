@@ -12,26 +12,24 @@ export default class StatisticsView extends JetView{
 					type:"scatter",
 					xValue:"#week#",
 					padding:{
-						top:14
+						top:10
 					},
 					xAxis:{
 						start:0,
 						end:53,
-						step:2,
-						title:"Weeks"
+						step:2
 					},
 					yAxis:{
 						start:0,
 						step:25,
-						end:100,
-						title:"Tasks"
+						end:100
 					},
 					legend:{
 						values:[
 							{text:"2017", color:"#8664C6"},
 							{text:"2018", color:"#1CA1C1"}
 						],
-						align:"right", layout:"x", valign:"top"
+						align:"right", layout:"x", valign:"bottom"
 					},
 					series:[
 						{

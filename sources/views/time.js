@@ -1,11 +1,10 @@
 import {JetView} from "webix-jet";
-import {hours} from "models/time";
 
 export default class TimeDonut extends JetView {
 	config(){
 		return {
 			type:"clean", rows:[
-				{ template:"Hours spent", type:"header" },
+				{ template:"Hours spent, %", type:"header" },
 				{
 					localId:"hours",
 					view:"chart",
@@ -28,6 +27,6 @@ export default class TimeDonut extends JetView {
 		};
 	}
 	init(){
-		this.$$("hours").parse(hours);
+		this.on(this.app,"person:select",(nm,prgs,id,hours) => this.$$("hours").parse(hours));
 	}
 }
