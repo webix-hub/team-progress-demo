@@ -3,11 +3,12 @@ import {persons} from "models/persons";
 
 export default class PersonsView extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			rows:[
 				{
 					view:"toolbar", elements:[
-						{ view:"label", label:"Persons" },
+						{ view:"label", label:_("Persons") },
 						{},
 						{
 							view:"button", type:"icon", icon:"arrow-down",
@@ -59,7 +60,7 @@ export default class PersonsView extends JetView {
 			]
 		};
 	}
-	init(){
+	init(view){
 		const list = this.$$("list");
 		persons.waitData.then(() => {
 			list.sync(persons);
@@ -69,6 +70,17 @@ export default class PersonsView extends JetView {
 		this.on(this.app,"task:select", id => {
 			list.select(id);
 			list.showItem(id);
+		});
+
+		this.on(this.app,"theme:change",theme => {
+			let toolbar = view.queryView({ view:"toolbar" });
+			//let list = view.queryView({ view:"list" });
+			if (theme === "dark")//{
+				toolbar.define("css","webix_dark");
+				//list.define("css","webix_dark");	// does not work yet
+			//}
+			else
+				webix.html.removeCss(toolbar.getNode(),"webix_dark");
 		});
 	}
 }

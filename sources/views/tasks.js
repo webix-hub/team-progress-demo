@@ -4,6 +4,7 @@ import {persons} from "models/persons";
 
 export default class TasksView extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			view:"datatable",
 			gravity:2,
@@ -18,9 +19,12 @@ export default class TasksView extends JetView {
 							return "<span class='webix_icon mdi mdi-clock incomplete'></span>";
 					}
 				},
-				{ id:"task", fillspace:3, header:"Task", sort:"text" },
 				{
-					id:"project", fillspace:1, header:"Project", sort:"text",
+					id:"task", fillspace:3, header:_("Task"), sort:"text",
+					template: obj => _(obj.task)
+				},
+				{
+					id:"project", fillspace:1, header:_("Project"), sort:"text",
 					template: obj => `<span class="${obj.project.toLowerCase()} tag">&nbsp;${obj.project}&nbsp;</span>`
 				},
 				{
@@ -36,7 +40,7 @@ export default class TasksView extends JetView {
 					sort:"date", template: obj => {
 						const format = webix.Date.dateToStr("%d %M %y");
 						if (!obj.end)
-							return "incomplete";
+							return _("incomplete");
 						else return format(obj.end);
 					}
 				}

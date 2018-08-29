@@ -2,10 +2,11 @@ import {JetView} from "webix-jet";
 
 export default class ProgressView extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", gravity:2,
 			rows:[
-				{ template:"Individual employee's progress", type:"header" },
+				{ template:_("Individual employee's progress"), type:"header" },
 				{
 					view:"chart",
 					localId:"progress",

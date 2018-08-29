@@ -3,9 +3,10 @@ import {stats} from "models/statistics";
 
 export default class StatisticsView extends JetView{
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", rows:[
-				{ template:"Total tasks completed", type:"header" },
+				{ template:_("Total tasks completed"), type:"header" },
 				{
 					localId:"stats",
 					view:"chart",

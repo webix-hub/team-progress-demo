@@ -2,9 +2,10 @@ import {JetView} from "webix-jet";
 
 export default class TimeDonut extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", rows:[
-				{ template:"Hours spent, %", type:"header" },
+				{ template:_("Hours spent, %"), type:"header" },
 				{
 					localId:"hours",
 					view:"chart",

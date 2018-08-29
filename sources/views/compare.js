@@ -3,9 +3,10 @@ import {projects} from "models/projects";
 
 export default class CompareView extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", rows:[
-				{ template:"Total tasks by projects", type:"header" },
+				{ template:_("Total tasks by projects"), type:"header" },
 				{
 					localId:"chart",
 					view:"chart",
