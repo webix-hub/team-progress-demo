@@ -1,4 +1,5 @@
 import {JetView} from "webix-jet";
+import NotificationView from "views/notifications";
 
 export default class ToolView extends JetView{
 	config(){
@@ -40,7 +41,10 @@ export default class ToolView extends JetView{
 				},
 				{
 					view:"button", type:"icon", css:"toolbar_button",
-					icon:"bell", width:40
+					icon:"bell", width:40, badge:2,
+					click: function(){
+						this.$scope.notifications.showLatest(this.$view);
+					}
 				},
 				{
 					template:"<image class='userphoto' src='data/photos/micha.jpg'>",
@@ -48,5 +52,8 @@ export default class ToolView extends JetView{
 				}
 			]
 		};
+	}
+	init(view){
+		this.notifications = this.ui(NotificationView);
 	}
 }

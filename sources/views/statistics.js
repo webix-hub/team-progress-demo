@@ -15,10 +15,10 @@ export default class StatisticsView extends JetView{
 						top:10
 					},
 					xAxis:{
-						start:0, end:53, step:2, lines:false, color:"#DADEE0"
+						start:0, end:53, step:2, lines:false, color:"#EDEFF0"
 					},
 					yAxis:{
-						start:0, step:25, end:100, color:"#fff"
+						start:0, step:25, end:100, color:"#fff", lineColor:"#EDEFF0"
 					},
 					legend:{
 						values:[
@@ -26,7 +26,7 @@ export default class StatisticsView extends JetView{
 							{ text:"2018", color:"#1CA1C1" }
 						],
 						align:"right", layout:"x", valign:"bottom",
-						margin:1, padding:10,
+						margin:1, padding:9,
 						marker:{
 							type:"round", width:8, height:9
 						}

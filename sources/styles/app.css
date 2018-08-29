@@ -67,3 +67,23 @@
 .webix_header{
 	text-align: center;
 }
+/* notifications */
+.notifications .webix_list_item{
+	line-height:20px;
+	padding:10px;
+}
+.notifications .webix_list_item .m_title{
+	font-weight: 500;
+}
+.notifications .webix_list_item .message{
+	display:block;
+	color:#94A1B3;
+}
+.link{
+	color:blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.unread{
+	color:#FF5C4C;
+}

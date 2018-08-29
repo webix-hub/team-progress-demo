@@ -13,18 +13,18 @@ export default class CompareView extends JetView {
 					radius:0,
 					barWidth:20,
 					yAxis:{
-						template:"#project#", lines:false, color:"#DADEE0"
+						template:"#project#", lines:false, color:"#EDEFF0"
 					},
 					xAxis:{
-						start:0, step:15, end:90, color:"#fff"
+						start:0, step:15, end:90, color:"#fff", lineColor:"#EDEFF0"
 					},
 					legend:{
 						values:[
-							{text:"2017",color:"#8664C6"},
-							{text:"2018",color:"#1CA1C1"}
+							{ text:"2017",color:"#8664C6" },
+							{ text:"2018",color:"#1CA1C1" }
 						],
 						valign:"bottom", align:"right", layout:"x",
-						margin:1, padding:10,
+						margin:1, padding:9,
 						marker:{
 							type:"round", width:8, height:9
 						}
