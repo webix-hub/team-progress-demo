@@ -15,10 +15,10 @@ export default class StatisticsView extends JetView{
 						top:10
 					},
 					xAxis:{
-						start:0, end:53, step:2, lines:false
+						start:0, end:53, step:2, lines:false, color:"#DADEE0"
 					},
 					yAxis:{
-						start:0, step:25, end:100
+						start:0, step:25, end:100, color:"#fff"
 					},
 					legend:{
 						values:[

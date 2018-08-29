@@ -17,10 +17,10 @@ export default class ProgressView extends JetView {
 						width:3
 					},
 					xAxis:{
-						template:"#week#", lines:false
+						template:"#week#", lines:false, color:"#DADEE0"
 					},
 					yAxis:{
-						start:0, end:100, step:20
+						start:0, end:100, step:20, color:"#fff"
 					},
 					tooltip:{
 						template:"Week #week#<br>#tasks# tasks completed"

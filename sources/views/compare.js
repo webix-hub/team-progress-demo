@@ -13,10 +13,10 @@ export default class CompareView extends JetView {
 					radius:0,
 					barWidth:20,
 					yAxis:{
-						template:"#project#", lines:false
+						template:"#project#", lines:false, color:"#DADEE0"
 					},
 					xAxis:{
-						start:0, step:15, end:90
+						start:0, step:15, end:90, color:"#fff"
 					},
 					legend:{
 						values:[
