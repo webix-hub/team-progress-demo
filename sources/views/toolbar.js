@@ -61,15 +61,22 @@ export default class ToolView extends JetView{
 			]
 		};
 	}
-	init(view){
+	init(){
 		this.notifications = this.ui(NotificationView);
 		this.settings = this.ui(SettingsPopup);
 
-		this.on(this.app,"theme:change",theme => {
-			if (theme === "dark")
-				view.define("css","webix_dark");
-			else
-				webix.html.removeCss(view.getNode(),"webix_dark");
-		});
+		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
+		if (curr_theme)
+			this.toggleTheme(curr_theme);
+
+		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
+	}
+	toggleTheme(theme){
+		let toolbar = this.getRoot();
+		if (theme === "dark"){
+			toolbar.define("css","webix_dark");
+		}
+		else
+			webix.html.removeCss(toolbar.getNode(),"webix_dark");
 	}
 }

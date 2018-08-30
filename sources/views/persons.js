@@ -60,27 +60,29 @@ export default class PersonsView extends JetView {
 			]
 		};
 	}
-	init(view){
+	init(){
 		const list = this.$$("list");
 		persons.waitData.then(() => {
 			list.sync(persons);
 			list.select(list.getFirstId());
 		});
 
+		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
+		if (curr_theme)
+			this.toggleTheme(curr_theme);
+
 		this.on(this.app,"task:select", id => {
 			list.select(id);
 			list.showItem(id);
 		});
 
-		this.on(this.app,"theme:change",theme => {
-			let toolbar = view.queryView({ view:"toolbar" });
-			//let list = view.queryView({ view:"list" });
-			if (theme === "dark")//{
-				toolbar.define("css","webix_dark");
-				//list.define("css","webix_dark");	// does not work yet
-			//}
-			else
-				webix.html.removeCss(toolbar.getNode(),"webix_dark");
-		});
+		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
+	}
+	toggleTheme(theme){
+		let toolbar = this.getRoot().queryView({ view:"toolbar" });
+		if (theme === "dark")
+			toolbar.define("css","webix_dark");
+		else
+			webix.html.removeCss(toolbar.getNode(),"webix_dark");
 	}
 }
