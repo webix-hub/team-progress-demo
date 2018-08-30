@@ -18,7 +18,7 @@ export default class TimeDonut extends JetView {
 						width:100,
 						align:"right",
 						valign:"middle",
-						template:"#activity#",
+						template:obj => _(obj.activity),
 						marker:{
 							type:"round", width:8, height:9
 						}

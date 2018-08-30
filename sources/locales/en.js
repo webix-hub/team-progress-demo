@@ -7,9 +7,6 @@ export default {
 	"Dark":"Dark",
 	"Light":"Light",
 	"Pick a language":"Pick a language",
-	"English":"English",
-	"Chinese":"Chinese",
-	"Spanish":"Spanish",
 	"Latest tasks in your projects":"Latest tasks in your projects",
 	"Top margin in a popup window is smaller than the...":"Top margin in a popup window is smaller than the...",
 	"Autocat report":"Autocat report",
@@ -52,5 +49,10 @@ export default {
 	"Binding Filters to each other":"Binding Filters to each other",
 	"Error: [DOM] Found 7 elements with non-unique id":"Error: [DOM] Found 7 elements with non-unique id",
 	"Datatable editing within multiview":"Datatable editing within multiview",
-	"Dynamic load filtering doesnot work with custom request call to server":"Dynamic load filtering doesnot work with custom request call to server"
+	"Dynamic load filtering doesnot work with custom request call to server":"Dynamic load filtering doesnot work with custom request call to server",
+	"Task":"Task",
+	"Project":"Project",
+	"User":"User",
+	"Start":"Start",
+	"Completed":"Completed"
 }

@@ -31,16 +31,16 @@ export default class TasksView extends JetView {
 					}
 				},
 				{
-					id:"user", fillspace:1, header:"User",
+					id:"user", fillspace:1, header:_("User"),
 					collection:persons, sort:"text"
 				},
 				{
 					id:"start", fillspace:1,
 					format:webix.Date.dateToStr("%d %M %y"),
-					sort:"date", header:"Start"
+					sort:"date", header:_("Start")
 				},
 				{
-					id:"end", fillspace:1, header:"Completed",
+					id:"end", fillspace:1, header:_("Completed"),
 					sort:"date", template: obj => {
 						const format = webix.Date.dateToStr("%d %M %y");
 						if (!obj.end)

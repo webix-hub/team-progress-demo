@@ -3,6 +3,7 @@ import {JetView} from "webix-jet";
 export default class SettingsPopup extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
+		const lang = this.app.getService("locale").getLang();
 		return {
 			view:"popup",
 			body:{
@@ -20,17 +21,22 @@ export default class SettingsPopup extends JetView {
 					},
 					{
 						view:"segmented", label:_("Pick a language"),
-						labelPosition:"top",
+						labelPosition:"top", id:"lang", value:lang,
 						options:[
-							{ id:"en", value:_("English") },
-							{ id:"ch", value:_("Chinese") },
-							{ id:"es", value:_("Spanish") }
-						]
+							{ id:"en", value:"English" },
+							{ id:"ch", value:"中文" },
+							{ id:"es", value:"Español" }
+						],click:() => this.toggleLanguage()
 					}
 				]
 			}
 		};
 	}
+	toggleLanguage(){
+        const langs = this.app.getService("locale");
+        const value = this.$$("lang").getValue();
+        langs.setLang(value);
+    }
 	// does not work yet for popup
 	// init(view){
 	// 	this.on(this.app,"theme:change",theme => {
