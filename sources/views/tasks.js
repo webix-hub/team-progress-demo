@@ -9,6 +9,7 @@ export default class TasksView extends JetView {
 			view:"datatable",
 			gravity:2,
 			select:"multiselect",
+			editable:true, editaction:"dblclick",
 			columns:[
 				{
 					id:"status", width:40, header:"", sort:"int",
@@ -20,11 +21,19 @@ export default class TasksView extends JetView {
 					}
 				},
 				{
-					id:"task", fillspace:3, header:_("Task"), sort:"text",
+					id:"task", fillspace:3, header:_("Task"),
+					sort:"text", editor:"text",
 					template: obj => _(obj.task)
 				},
 				{
-					id:"project", fillspace:1, header:_("Project"), sort:"text",
+					id:"project", fillspace:1, header:_("Project"),
+					sort:"text", editor:"select",
+					options:[
+						{ id:"Support", value:"Support" },
+						{ id:"AutoCat", value:"AutoCat" },
+						{ id:"CompuHope", value:"CompuHope" },
+						{ id:"Cubebeat", value:"Cubebeat" }
+					],
 					template: obj => {
 						return `<span class="${obj.project.toLowerCase()} 
 							tag">&nbsp;${obj.project}&nbsp;</span>`;
@@ -32,12 +41,13 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:_("User"),
-					collection:persons, sort:"text"
+					collection:persons, sort:"text", editor:"select"
 				},
 				{
 					id:"start", fillspace:1,
 					format:webix.Date.dateToStr("%d %M %y"),
-					sort:"date", header:_("Start")
+					editor:"date", sort:"date",
+					header:_("Start")
 				},
 				{
 					id:"end", fillspace:1, header:_("Completed"),
@@ -54,6 +64,13 @@ export default class TasksView extends JetView {
 					const user = this.$scope.getRoot().getItem(row.id).user;
 					this.$scope.app.callEvent("task:select",[user]);
 					this.showItem(row.id);
+				}
+			},
+			onClick:{
+				"mdi":function(ev,id){
+					const new_status = !this.getItem(id.row).status;
+					const end_date = new_status ? new Date() : null;
+					this.updateItem(id.row,{status:new_status,end:end_date});
 				}
 			}
 		};
