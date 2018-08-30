@@ -25,14 +25,18 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"project", fillspace:1, header:_("Project"), sort:"text",
-					template: obj => `<span class="${obj.project.toLowerCase()} tag">&nbsp;${obj.project}&nbsp;</span>`
+					template: obj => {
+						return `<span class="${obj.project.toLowerCase()} 
+							tag">&nbsp;${obj.project}&nbsp;</span>`;
+					}
 				},
 				{
 					id:"user", fillspace:1, header:"User",
 					collection:persons, sort:"text"
 				},
 				{
-					id:"start", fillspace:1, format:webix.Date.dateToStr("%d %M %y"),
+					id:"start", fillspace:1,
+					format:webix.Date.dateToStr("%d %M %y"),
 					sort:"date", header:"Start"
 				},
 				{
@@ -46,9 +50,10 @@ export default class TasksView extends JetView {
 				}
 			],
 			on:{
-				onAfterSelect:row => {
-					const user = this.getRoot().getItem(row.id).user;
-					this.app.callEvent("task:select",[user]);
+				onAfterSelect:function(row){
+					const user = this.$scope.getRoot().getItem(row.id).user;
+					this.$scope.app.callEvent("task:select",[user]);
+					this.showItem(row.id);
 				}
 			}
 		};
@@ -58,8 +63,12 @@ export default class TasksView extends JetView {
 
 		this.on(this.app,"person:select",(name,pr,id) => {
 			let res = tasks.find((obj) => id == obj.user);
-			view.select(res[0].id);
-			view.showItem(res[0].id);	  
+			view.unselect();
+			if (res.length){
+				for (let i = 0; i < res.length; i++){
+					view.select(res[i].id,true)
+				}
+			}
 		});
 	}
 }
