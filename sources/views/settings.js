@@ -37,10 +37,10 @@ export default class SettingsPopup extends JetView {
 							{ id:"es", value:"Español" },
 							{ id:"kr", value:"한국어" },
 							{ id:"ru", value:"Русский" },
-							{ id:"de", value:"Deutch" }
+							{ id:"de", value:"Deutsch" }
 						],
 						on:{
-							onChange:(newlang) => this.toggleLanguage(newlang)
+							onChange:newlang => this.toggleLanguage(newlang)
 						}
 					}
 				]

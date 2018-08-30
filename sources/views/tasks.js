@@ -10,9 +10,11 @@ export default class TasksView extends JetView {
 			gravity:2,
 			select:"multiselect",
 			editable:true, editaction:"dblclick",
+			tooltip:true,
 			columns:[
 				{
 					id:"status", width:40, header:"", sort:"int",
+					tooltip:"Click to complete/uncomplete the task",
 					template: obj => {
 						if (obj.status)
 							return "<span class='webix_icon mdi mdi-check-circle complete'></span>";
@@ -23,11 +25,13 @@ export default class TasksView extends JetView {
 				{
 					id:"task", fillspace:3, header:_("Task"),
 					sort:"text", editor:"text",
+					tooltip:"Double-click to edit the task name",
 					template: obj => _(obj.task)
 				},
 				{
 					id:"project", fillspace:1, header:_("Project"),
 					sort:"text", editor:"select",
+					tooltip:"Double-click to change the project",
 					options:[
 						{ id:"Support", value:"Support" },
 						{ id:"AutoCat", value:"AutoCat" },
@@ -41,17 +45,22 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:_("User"),
-					collection:persons, sort:"text", editor:"select"
+					collection:persons, sort:"text", editor:"select",
+					tooltip:"Double-click to assign to a different employee",
 				},
 				{
 					id:"start", fillspace:1,
 					format:webix.Date.dateToStr("%d %M %y"),
-					editor:"date", sort:"date",
+					sort:"date", tooltip:"The task was created",
 					header:_("Start")
 				},
 				{
 					id:"end", fillspace:1, header:_("Completed"),
-					sort:"date", template: obj => {
+					sort:"date",
+					tooltip:obj => {
+						return obj.end ? `The task was completed` : `Click on the red clock to complete the task`;
+					},
+					template: obj => {
 						const format = webix.Date.dateToStr("%d %M %y");
 						if (!obj.end)
 							return _("incomplete");
@@ -70,7 +79,7 @@ export default class TasksView extends JetView {
 				"mdi":function(ev,id){
 					const new_status = !this.getItem(id.row).status;
 					const end_date = new_status ? new Date() : null;
-					this.updateItem(id.row,{status:new_status,end:end_date});
+					this.updateItem(id.row,{ status:new_status,end:end_date });
 				}
 			}
 		};
