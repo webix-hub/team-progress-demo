@@ -1,6 +1,7 @@
 import {JetView} from "webix-jet";
 import NotificationView from "views/notifications";
 import SettingsPopup from "views/settings";
+import NewTaskPopup from "views/newtask";
 
 export default class ToolView extends JetView{
 	config(){
@@ -15,7 +16,7 @@ export default class ToolView extends JetView{
 					view:"button", type:"form", icon:"plus",
 					label:_("Add a task"), width:160,
 					click:() => {
-						// add a task to the grid
+						this.newtask.showWindow();
 					}
 				},
 				{},
@@ -64,6 +65,7 @@ export default class ToolView extends JetView{
 	init(){
 		this.notifications = this.ui(NotificationView);
 		this.settings = this.ui(SettingsPopup);
+		this.newtask = this.ui(NewTaskPopup);
 
 		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
 		if (curr_theme)
