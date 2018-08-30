@@ -29,32 +29,28 @@ export default class SettingsPopup extends JetView {
 						}
 					},
 					{
-						view:"segmented", label:_("Pick a language"),
+						view:"combo", label:_("Pick a language"),
 						labelPosition:"top", id:"lang", value:lang,
 						options:[
 							{ id:"en", value:"English" },
 							{ id:"ch", value:"中文" },
-							{ id:"es", value:"Español" }
-						],click:() => this.toggleLanguage()
+							{ id:"es", value:"Español" },
+							{ id:"kr", value:"한국어" },
+							{ id:"ru", value:"Русский" },
+							{ id:"de", value:"Deutch" }
+						],
+						on:{
+							onChange:(newlang) => this.toggleLanguage(newlang)
+						}
 					}
 				]
 			}
 		};
 	}
-	toggleLanguage(){
+	toggleLanguage(nl){
         const langs = this.app.getService("locale");
-        const value = this.$$("lang").getValue();
-        langs.setLang(value);
+        langs.setLang(nl);
     }
-	// does not work yet for popup
-	// init(view){
-	// 	this.on(this.app,"theme:change",theme => {
-	// 		if (theme === "dark")
-	// 			view.define("css","webix_dark");
-	// 		else
-	// 			webix.html.removeCss(view.getNode(),"webix_dark");
-	// 	});
-	// }
 	openSettings(pos){
 		this.getRoot().show(pos);
 	}
