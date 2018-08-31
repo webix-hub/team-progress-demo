@@ -1,5 +1,4 @@
 export const persons = [
-	{"id":"$empty","value":"no assignee",$empty:true},
 	{"id":1,"value":"Tommie Shurtleff"},
 	{"id":2,"value":"Dottie Ward"},
 	{"id":3,"value":"Camilla Mcculley"},

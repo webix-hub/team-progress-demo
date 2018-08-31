@@ -1,5 +1,5 @@
 import {JetView} from "webix-jet";
-import {persons} from "models/persons";
+import {persons} from "models/persoptions";
 import {projects} from "models/projoptions";
 
 export default class NewTaskPopup extends JetView {
@@ -21,11 +21,11 @@ export default class NewTaskPopup extends JetView {
 						cols:[
 							{
 								view:"combo", label:"Project",
-								name:"project", options:[]
+								name:"project", options:projects
 							},
 							{
 								view:"combo", label:"Assignee",
-								name:"user", options:[]
+								name:"user", options:persons
 							}
 						]
 					},
@@ -47,14 +47,10 @@ export default class NewTaskPopup extends JetView {
 					}
 				],
 				rules:{
-					"task":webix.rules.isNotEmpty
+					$all:webix.rules.isNotEmpty
 				}
 			}
 		}
-	}
-	init(view){
-		view.queryView({ name:"user" }).getList().data.sync(persons);
-		view.queryView({ name:"project" }).getList().parse(projects);
 	}
 	showWindow(){
 		this.getRoot().show();
