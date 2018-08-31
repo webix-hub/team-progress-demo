@@ -97,5 +97,17 @@ export default class TasksView extends JetView {
 			tasks.add(task);
 			view.showItem(view.getLastId());
 		});
+
+		this.on(this.app,"tasks:filter",id => {
+			if (id === "all")
+				view.filter();
+			else
+				view.filter("#project#",id);
+			
+			if (!view.count())
+				view.showOverlay("Looks like this project of yours needs some love and attention");
+			else
+				view.hideOverlay();
+		});
 	}
 }

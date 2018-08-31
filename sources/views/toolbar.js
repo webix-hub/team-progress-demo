@@ -6,11 +6,13 @@ import NewTaskPopup from "views/newtask";
 export default class ToolView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
+
 		return {
 			view:"toolbar", height:70,
 			elements:[
 				{
-					view:"label", template:_("Team Progress"), width:200, css:"main_label"
+					view:"label", template:_("Team Progress"),
+					width:200, css:"main_label"
 				},
 				{ 
 					view:"button", type:"form", icon:"plus",
@@ -33,25 +35,39 @@ export default class ToolView extends JetView{
 					]
 				},
 				{
-					view:"button", type:"icon", css:"toolbar_button",
-					icon:"magnify", width:40, click:() => {
+					view:"icon", icon:"magnify",
+					click:() => {
 						this.$$("search").show();
 					}
 				},
 				{
-					view:"button", type:"icon", css:"toolbar_button",
-					icon:"bookmark-check", width:40
+					view:"icon", icon:"bookmark-check",
+					tooltip:"Open the list of all tasks",
+					localId:"favs", click:function(){
+						if (this.config.icon.indexOf("check") !== -1){
+							this.$scope.show("projects");
+							this.config.icon = "view-dashboard";
+							this.config.tooltip = "Go back to the dashboard";
+						}
+						else {
+							this.$scope.show("dashboard");
+							this.config.icon = "bookmark-check";
+							this.config.tooltip = "Open the list of all tasks";
+						}
+						this.refresh();
+					}
 				},
 				{
-					view:"button", type:"icon", css:"toolbar_button",
-					icon:"bell", width:40, badge:2, tooltip:_("View the latest notifications"),
+					view:"icon", icon:"bell", badge:2,
+					tooltip:_("View the latest notifications"),
 					click:function(){
 						this.$scope.notifications.showLatest(this.$view);
 					}
 				},
 				{
-					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" + _("Change your personal settings") + ">",
-					width:60, borderless:true,
+					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" +
+						_("Change your personal settings") + ">",
+					width:72, borderless:true,
 					onClick:{
 						"userphoto":function(){
 							this.$scope.settings.openSettings(this.$view);
@@ -70,6 +86,14 @@ export default class ToolView extends JetView{
 		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
 		if (curr_theme)
 			this.toggleTheme(curr_theme);
+		
+		const curl = this.getUrl();
+		if (curl[1].page === "projects"){
+			let nav_btn = this.$$("favs");
+			nav_btn.config.icon = "view-dashboard";
+			nav_btn.config.tooltip = "Go back to the dashboard";
+			nav_btn.refresh();
+		}
 
 		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
 	}

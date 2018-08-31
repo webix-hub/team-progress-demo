@@ -66,6 +66,9 @@
 .autocat{
 	background-color:#FFC107;
 }
+.cubebeat{
+	background-color:rgb(153, 51, 102);
+}
 /* headers (templates) */
 .webix_header{
 	text-align: center;

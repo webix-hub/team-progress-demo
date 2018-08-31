@@ -48,7 +48,8 @@ export default class NewTaskPopup extends JetView {
 					}
 				],
 				rules:{
-					$all:webix.rules.isNotEmpty
+					user:webix.rules.isNotEmpty,
+					task:webix.rules.isNotEmpty
 				}
 			}
 		}
