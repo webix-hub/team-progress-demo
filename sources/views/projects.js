@@ -25,6 +25,6 @@ export default class ProjectsView extends JetView {
 		};
 	}
 	ready(){
-		webix.delay(() => this.$$("side:menu").select("all"),null,null,500);
+		webix.delay(() => this.$$("side:menu").select("all"),null,null,100);
 	}
 }
