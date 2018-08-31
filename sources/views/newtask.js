@@ -8,7 +8,7 @@ export default class NewTaskPopup extends JetView {
 			modal:true,
 			body:{
 				view:"form",
-				elements:[
+				rows:[
 					{ view:"text" },
 					{
 						view:"button", value:"Add",

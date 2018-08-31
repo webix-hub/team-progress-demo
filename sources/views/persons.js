@@ -11,17 +11,18 @@ export default class PersonsView extends JetView {
 						{ view:"label", label:_("Persons") },
 						{},
 						{
-							view:"button", type:"icon", icon:"arrow-down",
+							view:"button", type:"icon", icon:"filter-variant",
 							width:37, css:"toolbar_button",
+							tooltip:"Click to sort",
 							click:function(){
 								let dir = "";
-								if (this.config.icon.indexOf("down") !== -1){
+								if (this.config.icon.indexOf("up") !== -1){
 									dir = "desc";
-									this.config.icon = "arrow-up";
+									this.config.icon = "arrow-down";
 								}
 								else {
 									dir = "asc";
-									this.config.icon = "arrow-down";
+									this.config.icon = "arrow-up";
 								}
 								this.$scope.$$("list").sort("fname",dir);
 								this.refresh();
