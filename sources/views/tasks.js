@@ -110,4 +110,8 @@ export default class TasksView extends JetView {
 				view.hideOverlay();
 		});
 	}
+	urlChange(){
+		const param = this.getParam("lookup");
+		if (param) webix.message("looking up");
+	}
 }

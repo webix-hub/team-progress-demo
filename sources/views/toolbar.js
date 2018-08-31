@@ -25,10 +25,11 @@ export default class ToolView extends JetView{
 				{
 					localId:"search", hidden:true, margin:0,
 					cols:[
-						{ view:"text" },
+						{ view:"text", localId:"lookup" },
 						{
 							view:"button", type:"icon", icon:"close",
-							css:"toolbar_button close", width:40, click: () => {
+							css:"toolbar_button close", width:40,
+							click:() => {
 								this.$$("search").hide();
 							}
 						}
@@ -37,7 +38,10 @@ export default class ToolView extends JetView{
 				{
 					view:"icon", icon:"magnify",
 					click:() => {
-						this.$$("search").show();
+						const lookup = this.$$("lookup").getValue();
+						
+						if (lookup) this.show("projects?lookup="+lookup);
+						else this.$$("search").show();
 					}
 				},
 				{
