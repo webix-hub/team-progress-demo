@@ -103,7 +103,7 @@ export default class TasksView extends JetView {
 				view.filter();
 			else
 				view.filter("#project#",id);
-			
+
 			if (!view.count())
 				view.showOverlay("Looks like this project of yours needs some love and attention");
 			else
