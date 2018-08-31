@@ -1,6 +1,7 @@
 import {JetView} from "webix-jet";
 import {tasks} from "models/tasks";
-import {persons} from "models/persons";
+import {persons} from "models/persoptions";
+import {projects} from "models/projoptions";
 
 export default class TasksView extends JetView {
 	config(){
@@ -32,12 +33,7 @@ export default class TasksView extends JetView {
 					id:"project", fillspace:1, header:_("Project"),
 					sort:"text", editor:"select",
 					tooltip:"Double-click to change the project",
-					options:[
-						{ id:"Support", value:"Support" },
-						{ id:"AutoCat", value:"AutoCat" },
-						{ id:"CompuHope", value:"CompuHope" },
-						{ id:"Cubebeat", value:"Cubebeat" }
-					],
+					options:projects,
 					template: obj => {
 						return `<span class="${obj.project.toLowerCase()} 
 							tag">&nbsp;${obj.project}&nbsp;</span>`;
@@ -45,7 +41,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:_("User"),
-					collection:persons, sort:"text", editor:"select",
+					options:persons, sort:"text", editor:"select",
 					tooltip:"Double-click to assign to a different employee",
 				},
 				{
@@ -95,6 +91,11 @@ export default class TasksView extends JetView {
 					view.select(res[i].id,true)
 				}
 			}
+		});
+
+		this.on(this.app,"add:task",task => {
+			tasks.add(task);
+			view.showItem(view.getLastId());
 		});
 	}
 }

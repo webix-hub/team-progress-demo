@@ -4,6 +4,11 @@ export const tasks = new webix.DataCollection({
 		$init:function(obj){                                                                          
 			obj.start = webix.i18n.parseFormatDate(obj.start);
 			if (obj.end) obj.end = webix.i18n.parseFormatDate(obj.end);
-		}                                                                                  
+		},
+		status:0,
+		user:"",
+		project:"",
+		start:new Date(),
+		end:null
 	}
 });
