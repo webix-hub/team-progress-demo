@@ -4,27 +4,28 @@ import {projects} from "models/projoptions";
 
 export default class NewTaskPopup extends JetView {
 	config(){
+		const _ = this.app.getService("locale")._;
 		return {
 			view:"window",
 			position:"center",
 			modal:true,
-			head:"Add a new task",
+			head:_("Add a new task"),
 			body:{
 				view:"form",
 				elementsConfig:{ labelPosition:"top" },
 				rows:[
 					{
-						view:"text", label:"Task", name:"task",
+						view:"text", label:_("Task"), name:"task",
 						width:500
 					},
 					{
 						cols:[
 							{
-								view:"combo", label:"Project",
+								view:"combo", label:_("Project"),
 								name:"project", options:projects
 							},
 							{
-								view:"combo", label:"Assignee",
+								view:"combo", label:_("Assignee"),
 								name:"user", options:persons
 							}
 						]
@@ -32,13 +33,13 @@ export default class NewTaskPopup extends JetView {
 					{
 						cols:[
 							{
-								view:"button", value:"Cancel",
+								view:"button", value:_("Cancel"),
 								click:() => {
 									this.getBack();
 								}
 							},
 							{
-								view:"button", value:"Add", type:"form",
+								view:"button", value:_("Add"), type:"form",
 								click:() => {
 									this.saveTask();
 								}

@@ -15,7 +15,7 @@ export default class TasksView extends JetView {
 			columns:[
 				{
 					id:"status", width:40, header:"", sort:"int",
-					tooltip:"Click to complete/uncomplete the task",
+					tooltip:_("Click to complete/uncomplete the task"),
 					template: obj => {
 						if (obj.status)
 							return "<span class='webix_icon mdi mdi-check-circle complete'></span>";
@@ -26,13 +26,13 @@ export default class TasksView extends JetView {
 				{
 					id:"task", fillspace:3, header:_("Task"),
 					sort:"text", editor:"text",
-					tooltip:"Double-click to edit the task name",
+					tooltip:_("Double-click to edit the task name"),
 					template: obj => _(obj.task)
 				},
 				{
 					id:"project", fillspace:1, header:_("Project"),
 					sort:"text", editor:"select",
-					tooltip:"Double-click to change the project",
+					tooltip:_("Double-click to change the project"),
 					options:projects,
 					template: obj => {
 						return `<span class="${obj.project.toLowerCase()} 
@@ -42,19 +42,19 @@ export default class TasksView extends JetView {
 				{
 					id:"user", fillspace:1, header:_("User"),
 					options:persons, sort:"text", editor:"select",
-					tooltip:"Double-click to assign to a different employee",
+					tooltip:_("Double-click to assign to a different employee"),
 				},
 				{
 					id:"start", fillspace:1,
 					format:webix.Date.dateToStr("%d %M %y"),
-					sort:"date", tooltip:"The task was created",
+					sort:"date", tooltip:_("The task was created"),
 					header:_("Start")
 				},
 				{
 					id:"end", fillspace:1, header:_("Completed"),
 					sort:"date",
 					tooltip:obj => {
-						return obj.end ? `The task was completed` : `Click on the red clock to complete the task`;
+						return obj.end ? _("The task was completed") : _("Click on the red clock to complete the task");
 					},
 					template: obj => {
 						const format = webix.Date.dateToStr("%d %M %y");

@@ -53,5 +53,16 @@ export default {
 	"Project":"계획",
 	"User":"사용자",
 	"Start":"스타트",
-	"Completed":"완료 됨"
+	"Completed":"완료 됨",
+	"Add a new task":"添加新任務",
+	"Assignee":"代理人",
+	"Cancel":"取消",
+	"Add":"加",
+	"Click to complete/uncomplete the task":"單擊以完成或重新打開任務",
+	"Double-click to edit the task name":"雙擊以編輯任務名稱",
+	"Double-click to change the project":"雙擊以更改項目",
+	"Double-click to assign to a different employee":"雙擊以分配給其他員工",
+	"The task was created":"任務已創建",
+	"The task was completed":"任務完成了",
+	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務"
 }

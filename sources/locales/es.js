@@ -53,5 +53,16 @@ export default {
 	"Project":"Proyecto",
 	"User":"Usuario",
 	"Start":"Comienzo",
-	"Completed":"Terminado"
+	"Completed":"Terminado",
+	"Add a new task":"Agregar una nueva tarea",
+	"Assignee":"Cesionario",
+	"Cancel":"Cancelar",
+	"Add":"Añadir",
+	"Click to complete/uncomplete the task":"Haga clic para completar / completar la tarea",
+	"Double-click to edit the task name":"Haga doble clic para editar el nombre de la tarea",
+	"Double-click to change the project":"Haz doble clic para cambiar el proyecto",
+	"Double-click to assign to a different employee":"Haga doble clic para asignar a un empleado diferente",
+	"The task was created":"La tarea fue creada",
+	"The task was completed":"La tarea fue completada",
+	"Click on the red clock to complete the task":"Haga clic en el reloj rojo para completar la tarea"
 }

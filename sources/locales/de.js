@@ -6,7 +6,7 @@ export default {
 	"Pick your side of the Force":"Wähle deine Seite der Macht",
 	"Dark":"Dunkle",
 	"Light":"Helle",
-	"Pick a language":"Wählen Sie eine Sprache",
+	"Pick a language":"Wähle eine Sprache",
 	"Latest tasks in your projects":"Neueste Aufgaben in Ihren Projekten",
 	"Top margin in a popup window is smaller than the...":"Der obere Rand in einem Popup-Fenster ist kleiner als der...",
 	"Autocat report":"Autocat Bericht",
@@ -51,5 +51,16 @@ export default {
 	"Project":"Projekt",
 	"User":"Benutzer",
 	"Start":"Anfang",
-	"Completed":"Abgeschlossen"
+	"Completed":"Abgeschlossen",
+	"Add a new task":"Eine neue Aufgabe hinzufügen",
+	"Assignee":"Beauftragter",
+	"Cancel":"Stornieren",
+	"Add":"Hinzufügen",
+	"Click to complete/uncomplete the task":"Klicken Sie auf, um die Aufgabe abzuschließen / um wieder die Aufgabe zu öffnen",
+	"Double-click to edit the task name":"Doppelklicken Sie, um den Namen der Aufgabe zu bearbeiten",
+	"Double-click to change the project":"Doppelklicken Sie, um das Projekt zu ändern",
+	"Double-click to assign to a different employee":"Doppelklicken Sie, um einem anderen Mitarbeiter zuzuweisen",
+	"The task was created":"Die Aufgabe wurde erstellt",
+	"The task was completed":"Die Aufgabe wurde abgeschlossen",
+	"Click on the red clock to complete the task":"Klicke auf die rote Uhr, um die Aufgabe abzuschließen"
 }

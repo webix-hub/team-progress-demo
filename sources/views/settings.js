@@ -18,7 +18,7 @@ export default class SettingsPopup extends JetView {
 						onLabel:_("Dark"),
 						offLabel:_("Light"),
 						label:_("Pick your side of the Force"),
-						labelWidth:185, width:275,
+						labelWidth:200, width:300,
 						value:curr_theme,
 						on:{
 							onChange:newv => {

@@ -54,5 +54,17 @@ export default {
 	"Project":"Project",
 	"User":"User",
 	"Start":"Start",
-	"Completed":"Completed"
+	"Completed":"Completed",
+	"Add a new task":"Add a new task",
+	"Project":"Project",
+	"Assignee":"Assignee",
+	"Cancel":"Cancel",
+	"Add":"Add",
+	"Click to complete/uncomplete the task":"Click to complete/uncomplete the task",
+	"Double-click to edit the task name":"Double-click to edit the task name",
+	"Double-click to change the project":"Double-click to change the project",
+	"Double-click to assign to a different employee":"Double-click to assign to a different employee",
+	"The task was created":"The task was created",
+	"The task was completed":"The task was completed",
+	"Click on the red clock to complete the task":"Click on the red clock to complete the task"
 }

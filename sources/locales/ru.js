@@ -50,5 +50,17 @@ export default {
 	"Project":"Проект",
 	"User":"Сотрудник",
 	"Start":"Начало",
-	"Completed":"Конец"
+	"Completed":"Конец",
+	"Add a new task":"Добавить задачу",
+	"Project":"Проект",
+	"Assignee":"Сотрудник",
+	"Cancel":"Отменить",
+	"Add":"Добавить",
+	"Click to complete/uncomplete the task":"Кликните, чтобы завершить или снова открыть задачу",
+	"Double-click to edit the task name":"Кликните два раза, чтобы изменить название задачи",
+	"Double-click to change the project":"Кликните два раза, чтобы переместить задачу в другой проект",
+	"Double-click to assign to a different employee":"Кликните два раза, чтобы поручить задачу другому сотруднику",
+	"The task was created":"Задача создана",
+	"The task was completed":"Задача выполнена",
+	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу"
 }
