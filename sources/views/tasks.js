@@ -46,7 +46,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"start", fillspace:1,
-					format:webix.i18n.longDateFormatStr,
+					format:webix.Date.dateToStr("%d %M %y"),
 					sort:"date", tooltip:_("The task was created"),
 					header:_("Start")
 				},
@@ -113,11 +113,8 @@ export default class TasksView extends JetView {
 		});
 
 		this.on(this.app,"lang:change", (nl,cnt) => {
-			webix.delay(()=>{
-				console.log(nl+"-"+cnt);
-				webix.i18n.setLocale(nl+"-"+cnt);
-				this.getRoot().refresh();
-			},null,null,1000);
+			webix.i18n.setLocale(nl+"-"+cnt);
+			this.getRoot().refresh();
 		});
 	}
 	urlChange(){
