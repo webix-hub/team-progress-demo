@@ -15,7 +15,8 @@ export default class NotificationView extends JetView {
 						width:250, height:250,
 						template:(obj,common) => {
 							return (!obj.read ? common.itemNew() : "") +
-								"<span class='m_title'>" + _(obj.title) + "</span>" +
+								"<span class='m_title" + (!obj.read ? " unread" :"") + "'>"
+								+ _(obj.title) + "</span>" +
 								"<span class='message'>" + _(obj.message) + "</span>";
 						},
 						type:{
