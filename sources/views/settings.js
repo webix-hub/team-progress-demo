@@ -48,9 +48,9 @@ export default class SettingsPopup extends JetView {
 		};
 	}
 	toggleLanguage(nl){
-        const langs = this.app.getService("locale");
-        webix.delay(() => langs.setLang(nl),null,null,1);
-    }
+		const langs = this.app.getService("locale");
+		webix.delay(() => langs.setLang(nl),null,null,1);
+	}
 	openSettings(pos){
 		this.getRoot().show(pos);
 	}

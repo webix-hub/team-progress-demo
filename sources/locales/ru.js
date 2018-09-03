@@ -52,7 +52,6 @@ export default {
 	"Start":"Начало",
 	"Completed":"Конец",
 	"Add a new task":"Добавить задачу",
-	"Project":"Проект",
 	"Assignee":"Сотрудник",
 	"Cancel":"Отменить",
 	"Add":"Добавить",
@@ -63,4 +62,4 @@ export default {
 	"The task was created":"Задача создана",
 	"The task was completed":"Задача выполнена",
 	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу"
-}
+};

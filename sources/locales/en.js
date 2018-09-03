@@ -28,14 +28,10 @@ export default {
 	"Meeting":"Meeting",
 	"Mail":"Mail",
 	"Calls":"Calls",
-	"Top margin in a popup window is smaller than the...":"Top margin in a popup window is smaller than the...",
 	"Button text on mobile devices":"Button text on mobile devices",
 	"Search pattern is ambiguous":"Search pattern is ambiguous",
-	"Navigations problem in the left menu":"Navigations problem in the left menu",
-	"'Confirm' button styling":"'Confirm' button styling",
 	"Links in the upper right menu":"Links in the upper right menu",
 	"Menu thumbnails disappear when I click them":"Menu thumbnails disappear when I click them",
-	"No ability to exit profile editing dialogue":"No ability to exit profile editing dialogue",
 	"Document export is empty":"Document export is empty",
 	"Button text in the right menu":"Button text in the right menu",
 	"Search is not working properly":"Search is not working properly",
@@ -56,7 +52,6 @@ export default {
 	"Start":"Start",
 	"Completed":"Completed",
 	"Add a new task":"Add a new task",
-	"Project":"Project",
 	"Assignee":"Assignee",
 	"Cancel":"Cancel",
 	"Add":"Add",
@@ -67,4 +62,4 @@ export default {
 	"The task was created":"The task was created",
 	"The task was completed":"The task was completed",
 	"Click on the red clock to complete the task":"Click on the red clock to complete the task"
-}
+};

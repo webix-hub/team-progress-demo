@@ -28,13 +28,10 @@ export default {
 	"Meeting":"모임",
 	"Mail":"우편",
 	"Calls":"전화",
-	"Top margin in a popup window is smaller than the...":"팝업 창에서 위쪽 여백이보다 작습니다 ...",
 	"Button text on mobile devices":"휴대 기기의 버튼 텍스트",
 	"Search pattern is ambiguous":"검색 패턴이 모호합니다",
-	"Navigations problem in the left menu":"왼쪽 메뉴의 탐색 문제",
 	"Links in the upper right menu":"오른쪽 상단 메뉴의 링크",
 	"Menu thumbnails disappear when I click them":"메뉴 축소판을 클릭하면 사라집니다",
-	"No ability to exit profile editing dialogue":"프로필 편집 대화 상자를 종료 할 수 없음",
 	"Document export is empty":"문서 내보내기가 비어 있습니다",
 	"Button text in the right menu":"오른쪽 메뉴의 버튼 텍스트",
 	"Search is not working properly":"검색이 제대로 작동하지 않습니다",
@@ -65,4 +62,4 @@ export default {
 	"The task was created":"任務已創建",
 	"The task was completed":"任務完成了",
 	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務"
-}
+};

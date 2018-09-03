@@ -28,13 +28,10 @@ export default {
 	"Meeting":"會議",
 	"Mail":"郵件",
 	"Calls":"呼叫",
-	"Top margin in a popup window is smaller than the...":"彈出窗口中的上邊距小於...",
 	"Button text on mobile devices":"移動設備上的按鈕文字",
 	"Search pattern is ambiguous":"搜索模式含糊不清",
-	"Navigations problem in the left menu":"左側菜單中的導航問題",
 	"Links in the upper right menu":"右上方菜單中的鏈接",
 	"Menu thumbnails disappear when I click them":"單擊它們時，菜單縮略圖消失",
-	"No ability to exit profile editing dialogue":"無法退出配置文件編輯對話框",
 	"Document export is empty":"文檔導出為空",
 	"Button text in the right menu":"右側菜單中的按鈕文本",
 	"Search is not working properly":"搜索無法正常工作",
@@ -65,4 +62,4 @@ export default {
 	"The task was created":"任務已創建",
 	"The task was completed":"任務完成了",
 	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務"
-}
+};

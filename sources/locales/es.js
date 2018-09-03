@@ -28,13 +28,10 @@ export default {
 	"Meeting":"Reunión",
 	"Mail":"Correo",
 	"Calls":"Llamadas",
-	"Top margin in a popup window is smaller than the...":"El margen superior en una ventana emergente es más pequeño que el ...",
 	"Button text on mobile devices":"Texto del botón en dispositivos móviles",
 	"Search pattern is ambiguous":"El patrón de búsqueda es ambiguo",
-	"Navigations problem in the left menu":"Problema de navegación en el menú de la izquierda",
 	"Links in the upper right menu":"Enlaces en el menú superior derecho",
 	"Menu thumbnails disappear when I click them":"Las miniaturas del menú desaparecen cuando hago clic en ellas",
-	"No ability to exit profile editing dialogue":"Sin posibilidad de salir del diálogo de edición de perfil",
 	"Document export is empty":"La exportación del documento está vacía",
 	"Button text in the right menu":"Texto del botón en el menú de la derecha",
 	"Search is not working properly":"La búsqueda no funciona correctamente",
@@ -65,4 +62,4 @@ export default {
 	"The task was created":"La tarea fue creada",
 	"The task was completed":"La tarea fue completada",
 	"Click on the red clock to complete the task":"Haga clic en el reloj rojo para completar la tarea"
-}
+};

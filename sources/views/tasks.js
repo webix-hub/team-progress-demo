@@ -88,7 +88,7 @@ export default class TasksView extends JetView {
 			view.unselect();
 			if (res.length){
 				for (let i = 0; i < res.length; i++){
-					view.select(res[i].id,true)
+					view.select(res[i].id,true);
 				}
 			}
 		});

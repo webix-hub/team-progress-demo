@@ -52,7 +52,7 @@ export default class NewTaskPopup extends JetView {
 					task:webix.rules.isNotEmpty
 				}
 			}
-		}
+		};
 	}
 	showWindow(){
 		this.getRoot().show();

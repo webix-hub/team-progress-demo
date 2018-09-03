@@ -49,4 +49,4 @@ export const persons = [
 	{"id":48,"value":"Emelda Araiza"},
 	{"id":49,"value":"Lasonya Capozzi"},
 	{"id":50,"value":"Toshia Lininger"}
-]
+];

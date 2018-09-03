@@ -28,7 +28,6 @@ export default {
 	"Meeting":"Treffen",
 	"Mail":"E-Mail",
 	"Calls":"Anrufe",
-	"Top margin in a popup window is smaller than the...":"Der obere Rand in einem Popup-Fenster ist kleiner als der ...",
 	"Button text on mobile devices":"Schaltflächentext auf mobilen Geräten",
 	"Search pattern is ambiguous":"Suchmuster ist mehrdeutig",
 	"Links in the upper right menu":"Enlaces en el menú superior derecho",
@@ -63,4 +62,4 @@ export default {
 	"The task was created":"Die Aufgabe wurde erstellt",
 	"The task was completed":"Die Aufgabe wurde abgeschlossen",
 	"Click on the red clock to complete the task":"Klicke auf die rote Uhr, um die Aufgabe abzuschließen"
-}
+};
