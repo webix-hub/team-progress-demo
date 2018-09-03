@@ -49,7 +49,7 @@ export default class SettingsPopup extends JetView {
 	}
 	toggleLanguage(nl){
         const langs = this.app.getService("locale");
-        langs.setLang(nl);
+        webix.delay(() => langs.setLang(nl),null,null,1);
     }
 	openSettings(pos){
 		this.getRoot().show(pos);
