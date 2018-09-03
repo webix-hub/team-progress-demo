@@ -29,6 +29,9 @@
 	line-height:20px;
 }
 /* toolbar buttons */
+.logo{
+	background:url(webix.svg) 12px 4px no-repeat;
+}
 .toolbar_button button{
 	padding:0;
 	text-align:center;
@@ -40,7 +43,7 @@
 	background-color:rgba(255, 91, 76, 0.548);
 }
 .webix_el_label.main_label{
-	line-height: 54px;
+	line-height:44px;
 }
 /* grid */
 .complete{

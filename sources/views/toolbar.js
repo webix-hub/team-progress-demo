@@ -8,9 +8,10 @@ export default class ToolView extends JetView{
 		const _ = this.app.getService("locale")._;
 
 		return {
-			view:"toolbar", height:70,
+			view:"toolbar", height:56,
 			visibleBatch:"default",
 			elements:[
+				{ css:"logo", width:63 },
 				{
 					view:"label", template:_("Team Progress"),
 					width:200, css:"main_label",
