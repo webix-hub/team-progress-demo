@@ -9,28 +9,49 @@ export default class ToolView extends JetView{
 
 		return {
 			view:"toolbar", height:70,
+			visibleBatch:"default",
 			elements:[
 				{
 					view:"label", template:_("Team Progress"),
-					width:200, css:"main_label"
+					width:200, css:"main_label",
+					batch:"default"
 				},
 				{ 
 					view:"button", type:"form", icon:"plus",
 					label:_("Add a task"), width:160,
+					batch:"default",
 					click:() => {
 						this.newtask.showWindow();
 					}
 				},
-				{},
+				{ batch:"default" },
 				{
-					localId:"search", hidden:true, margin:0,
+					localId:"search", //hidden:true,
+					margin:0,
+					batch:"search",
 					cols:[
-						{ view:"text", localId:"lookup" },
+						{
+							view:"text", localId:"lookup",
+							on:{
+								onKeyPress(code){
+									const lookup = this.getValue();
+									if (lookup && code === 13){
+										const nav_btn = this.$scope.$$("favs");
+										if (nav_btn.config.icon.indexOf("check") !== -1){
+											nav_btn.config.icon = "view-dashboard";
+											nav_btn.config.tooltip = "Go back to the dashboard";
+											nav_btn.refresh();
+										}
+										this.$scope.show("projects?lookup="+lookup);
+									}
+								}
+							}
+						},
 						{
 							view:"button", type:"icon", icon:"close",
 							css:"toolbar_button close", width:40,
 							click:() => {
-								this.$$("search").hide();
+								this.getRoot().showBatch("default");
 							}
 						}
 					]
@@ -39,15 +60,18 @@ export default class ToolView extends JetView{
 					view:"icon", icon:"magnify",
 					click:() => {
 						const lookup = this.$$("lookup").getValue();
-						
-						if (lookup) this.show("projects?lookup="+lookup);
-						else this.$$("search").show();
+						if (!this.$$("search").isVisible())
+							// this.$$("search").show();
+							this.getRoot().showBatch("search");
+						else if (lookup)
+							this.show("projects?lookup="+lookup);
 					}
 				},
 				{
 					view:"icon", icon:"bookmark-check",
 					tooltip:"Open the list of all tasks",
-					localId:"favs", click:function(){
+					localId:"favs", batch:"default",
+					click:function(){
 						if (this.config.icon.indexOf("check") !== -1){
 							this.$scope.show("projects");
 							this.config.icon = "view-dashboard";
@@ -63,6 +87,7 @@ export default class ToolView extends JetView{
 				},
 				{
 					view:"icon", icon:"bell", badge:2,
+					batch:"default",
 					tooltip:_("View the latest notifications"),
 					click:function(){
 						this.$scope.notifications.showLatest(this.$view);
@@ -72,6 +97,7 @@ export default class ToolView extends JetView{
 					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" +
 						_("Change your personal settings") + ">",
 					width:72, borderless:true,
+					batch:"default",
 					onClick:{
 						"userphoto":function(){
 							this.$scope.settings.openSettings(this.$view);

@@ -112,6 +112,9 @@ export default class TasksView extends JetView {
 	}
 	urlChange(){
 		const param = this.getParam("lookup");
-		if (param) webix.message("looking up");
+		if (param)
+			this.getRoot().filter(obj => {
+				if (obj.task.toLowerCase().indexOf(param) !== -1) return true;
+			});
 	}
 }
