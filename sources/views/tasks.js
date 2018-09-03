@@ -96,6 +96,8 @@ export default class TasksView extends JetView {
 		this.on(this.app,"add:task",task => {
 			tasks.add(task);
 			view.showItem(view.getLastId());
+			const proj = this.getParentView().$$("side:menu").getSelectedId();
+			if (proj) this.app.callEvent("tasks:filter",[proj]);
 		});
 
 		this.on(this.app,"tasks:filter",id => {
