@@ -42,7 +42,8 @@ export default class StatisticsView extends JetView{
 							},
 							line:{ color:"#1CA1C1", width:2 },
 							tooltip:{
-								template:"Week #week#<br>#tasks17# tasks completed"
+								template:_("Week") + " #week#<br>#tasks17# "
+									+ _("tasks completed")
 							}
 						},
 						{
@@ -53,7 +54,8 @@ export default class StatisticsView extends JetView{
 							},
 							line:{ color:"#8664C6", width:2 },
 							tooltip:{
-								template:"Week #week#<br>#tasks18# tasks completed"
+								template:_("Week") + " #week#<br>#tasks18# "
+								+ _("tasks completed")
 							}
 						}
 					]

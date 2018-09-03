@@ -1,8 +1,10 @@
 export default {
 	"Team Progress":"Прогресс команды",
 	"Add a task":"Добавить задачу",
+	"Click to search a task":"Найти задачу",
+	"Open the list of all tasks":"Открыть список всех задач",
 	"View the latest notifications":"Просмотреть список последних уведомлений",
-	"Change your personal settings":"Cambia tu configuración personal",
+	"Change\u00a0your\u00a0personal\u00a0settings":"Cambia tu configuración personal",
 	"Pick your side of the Force":"Выберите сторону Силы",
 	"Dark":"Темная",
 	"Light":"Светлая",
@@ -19,6 +21,7 @@ export default {
 	"No ability to exit profile editing dialogue":"Невозможно выйти из редактирования профиля",
 	"See all notifications":"Посмотреть все уведомления",
 	"Persons":"Сотрудники",
+	"Click to sort":"Сортировать",
 	"Total tasks completed":"Завершенные задачи",
 	"Hours spent, %":"Распределение рабочего времени,%",
 	"Individual employee's progress":"Прогресс сотрудника",
@@ -61,5 +64,7 @@ export default {
 	"Double-click to assign to a different employee":"Кликните два раза, чтобы поручить задачу другому сотруднику",
 	"The task was created":"Задача создана",
 	"The task was completed":"Задача выполнена",
-	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу"
+	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу",
+	"Week":"Неделя",
+	"tasks completed":"заданий выполнено"
 };

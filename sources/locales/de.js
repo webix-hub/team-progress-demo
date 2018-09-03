@@ -1,8 +1,10 @@
 export default {
 	"Team Progress":"Team Fortschritt",
 	"Add a task":"Aufgabe hinzuаügen",
+	"Click to search a task":"Klicken Sie, um nach einer Aufgabe zu suchen",
+	"Open the list of all tasks":"Öffnen Sie die Liste aller Aufgaben",
 	"View the latest notifications":"Sehen Sie sich die neuesten Benachrichtigungen an",
-	"Change your personal settings":"Ändern Sie Ihre persönlichen Einstellungen",
+	"Change\u00a0your\u00a0personal\u00a0settings":"Ändern Sie Ihre persönlichen Einstellungen",
 	"Pick your side of the Force":"Wähle deine Seite der Macht",
 	"Dark":"Dunkle",
 	"Light":"Helle",
@@ -19,6 +21,7 @@ export default {
 	"No ability to exit profile editing dialogue":"Keine Möglichkeit, den Dialog zur Profilbearbeitung zu verlassen",
 	"See all notifications":"Alle Benachrichtigungen anzeigen",
 	"Persons":"Personen",
+	"Click to sort":"Klicken Sie, um zu sortieren",
 	"Total tasks completed":"Gesamtzahl der abgeschlossenen Aufgaben",
 	"Hours spent, %":"Stunden verbracht, %",
 	"Individual employee's progress":"Fortschritt des einzelnen Mitarbeiters",
@@ -61,5 +64,7 @@ export default {
 	"Double-click to assign to a different employee":"Doppelklicken Sie, um einem anderen Mitarbeiter zuzuweisen",
 	"The task was created":"Die Aufgabe wurde erstellt",
 	"The task was completed":"Die Aufgabe wurde abgeschlossen",
-	"Click on the red clock to complete the task":"Klicke auf die rote Uhr, um die Aufgabe abzuschließen"
+	"Click on the red clock to complete the task":"Klicke auf die rote Uhr, um die Aufgabe abzuschließen",
+	"Week":"Woche",
+	"tasks completed":"Aufgaben abgeschlossen"
 };

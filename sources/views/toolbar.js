@@ -59,6 +59,7 @@ export default class ToolView extends JetView{
 				},
 				{
 					view:"icon", icon:"magnify",
+					tooltip:_("Click to search a task"),
 					click:() => {
 						const lookup = this.$$("lookup").getValue();
 						if (!this.$$("search").isVisible())
@@ -70,18 +71,18 @@ export default class ToolView extends JetView{
 				},
 				{
 					view:"icon", icon:"bookmark-check",
-					tooltip:"Open the list of all tasks",
+					tooltip:_("Open the list of all tasks"),
 					localId:"favs", batch:"default",
 					click:function(){
 						if (this.config.icon.indexOf("check") !== -1){
 							this.$scope.show("projects");
 							this.config.icon = "view-dashboard";
-							this.config.tooltip = "Go back to the dashboard";
+							this.config.tooltip = _("Go back to the dashboard");
 						}
 						else {
 							this.$scope.show("dashboard");
 							this.config.icon = "bookmark-check";
-							this.config.tooltip = "Open the list of all tasks";
+							this.config.tooltip = _("Open the list of all tasks");
 						}
 						this.refresh();
 					}
@@ -96,7 +97,7 @@ export default class ToolView extends JetView{
 				},
 				{
 					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" +
-						_("Change your personal settings") + ">",
+						_("Change\u00a0your\u00a0personal\u00a0settings") + ">",
 					width:58, borderless:true,
 					batch:"default",
 					onClick:{

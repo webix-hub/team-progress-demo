@@ -1,8 +1,10 @@
 export default {
 	"Team Progress":"團隊進步",
 	"Add a task":"添加任務",
+	"Click to search a task":"單擊以搜索任務",
+	"Open the list of all tasks":"打開所有任務列表",
 	"View the latest notifications":"查看最新通知",
-	"Change your personal settings":"更改您的個人設置",
+	"Change\u00a0your\u00a0personal\u00a0settings":"更改您的個人設置",
 	"Pick your side of the Force":"選擇你的力量",
 	"Dark":"黑暗",
 	"Light":"光",
@@ -19,6 +21,7 @@ export default {
 	"No ability to exit profile editing dialogue":"無法退出配置文件編輯對話框",
 	"See all notifications":"查看所有通知",
 	"Persons":"人",
+	"Click to sort":"點擊排序",
 	"Total tasks completed":"完成的任務總數",
 	"Hours spent, %":"花費的時間，％",
 	"Individual employee's progress":"個人員工的進步",
@@ -61,5 +64,7 @@ export default {
 	"Double-click to assign to a different employee":"雙擊以分配給其他員工",
 	"The task was created":"任務已創建",
 	"The task was completed":"任務完成了",
-	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務"
+	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務",
+	"Week":"週",
+	"tasks completed":"任務完成"
 };

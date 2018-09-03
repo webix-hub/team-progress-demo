@@ -1,8 +1,10 @@
 export default {
 	"Team Progress":"Team Progress",
 	"Add a task":"Add a task",
+	"Click to search a task":"Click to search a task",
+	"Open the list of all tasks":"Open the list of all tasks",
 	"View the latest notifications":"View the latest notifications",
-	"Change your personal settings":"Change your personal settings",
+	"Change\u00a0your\u00a0personal\u00a0settings":"Change your personal settings",
 	"Pick your side of the Force":"Pick your side of the Force",
 	"Dark":"Dark",
 	"Light":"Light",
@@ -19,6 +21,7 @@ export default {
 	"No ability to exit profile editing dialogue":"No ability to exit profile editing dialogue",
 	"See all notifications":"See all notifications",
 	"Persons":"Persons",
+	"Click to sort":"Click to sort",
 	"Total tasks completed":"Total tasks completed",
 	"Hours spent, %":"Hours spent, %",
 	"Individual employee's progress":"Individual employee's progress",
@@ -61,5 +64,7 @@ export default {
 	"Double-click to assign to a different employee":"Double-click to assign to a different employee",
 	"The task was created":"The task was created",
 	"The task was completed":"The task was completed",
-	"Click on the red clock to complete the task":"Click on the red clock to complete the task"
+	"Click on the red clock to complete the task":"Click on the red clock to complete the task",
+	"Week":"Week",
+	"tasks completed":"tasks completed"
 };

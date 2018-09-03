@@ -24,7 +24,7 @@ export default class ProgressView extends JetView {
 						start:0, end:100, step:20, color:"#fff", lineColor:"#EDEFF0"
 					},
 					tooltip:{
-						template:"Week #week#<br>#tasks# tasks completed"
+						template:_("Week") + " #week#<br>#tasks# " + _("tasks completed")
 					},
 					padding:{
 						top:10

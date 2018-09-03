@@ -13,7 +13,7 @@ export default class PersonsView extends JetView {
 						{
 							view:"button", type:"icon", icon:"filter-variant",
 							width:37, css:"toolbar_button",
-							tooltip:"Click to sort",
+							tooltip:_("Click to sort"),
 							click:function(){
 								let dir = "";
 								if (this.config.icon.indexOf("up") !== -1){
