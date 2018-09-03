@@ -97,7 +97,7 @@ export default class ToolView extends JetView{
 				{
 					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" +
 						_("Change your personal settings") + ">",
-					width:72, borderless:true,
+					width:58, borderless:true,
 					batch:"default",
 					onClick:{
 						"userphoto":function(){
