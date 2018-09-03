@@ -11,7 +11,7 @@ export default class ToolView extends JetView{
 			view:"toolbar", height:56,
 			visibleBatch:"default",
 			elements:[
-				{ css:"logo", width:63 },
+				{ css:"logo", width:63, batch:"default" },
 				{
 					view:"label", template:_("Team Progress"),
 					width:200, css:"main_label",
