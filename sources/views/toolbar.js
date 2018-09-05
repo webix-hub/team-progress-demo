@@ -3,7 +3,7 @@ import NotificationView from "views/notifications";
 import SettingsPopup from "views/settings";
 import NewTaskPopup from "views/newtask";
 
-export default class ToolView extends JetView{
+export default class ToolbarView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
 
@@ -21,13 +21,11 @@ export default class ToolView extends JetView{
 					view:"button", type:"form", icon:"plus",
 					label:_("Add a task"), width:160,
 					batch:"default",
-					click:() => {
-						this.newtask.showWindow();
-					}
+					click:() => this.newtask.showWindow()
 				},
 				{ batch:"default" },
 				{
-					localId:"search", //hidden:true,
+					localId:"search",
 					margin:0,
 					batch:"search",
 					cols:[
@@ -51,9 +49,7 @@ export default class ToolView extends JetView{
 						{
 							view:"button", type:"icon", icon:"close",
 							css:"toolbar_button close", width:40,
-							click:() => {
-								this.getRoot().showBatch("default");
-							}
+							click:() => this.getRoot().showBatch("default")
 						}
 					]
 				},
@@ -63,7 +59,6 @@ export default class ToolView extends JetView{
 					click:() => {
 						const lookup = this.$$("lookup").getValue();
 						if (!this.$$("search").isVisible())
-							// this.$$("search").show();
 							this.getRoot().showBatch("search");
 						else if (lookup)
 							this.show("projects?lookup="+lookup);
@@ -92,7 +87,7 @@ export default class ToolView extends JetView{
 					batch:"default",
 					tooltip:_("View the latest notifications"),
 					click:function(){
-						this.$scope.notifications.showLatest(this.$view);
+						this.$scope.notifications.showWindow(this.$view);
 					}
 				},
 				{
@@ -102,7 +97,7 @@ export default class ToolView extends JetView{
 					batch:"default",
 					onClick:{
 						"userphoto":function(){
-							this.$scope.settings.openSettings(this.$view);
+							this.$scope.settings.showWindow(this.$view);
 							return false;
 						}
 					}
@@ -130,11 +125,11 @@ export default class ToolView extends JetView{
 		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
 	}
 	toggleTheme(theme){
-		let toolbar = this.getRoot();
+		let toolbar = this.getRoot().$view;
 		if (theme === "dark"){
-			toolbar.define("css","webix_dark");
+			webix.html.addCss(toolbar,"webix_dark");
 		}
 		else
-			webix.html.removeCss(toolbar.getNode(),"webix_dark");
+			webix.html.removeCss(toolbar,"webix_dark");
 	}
 }

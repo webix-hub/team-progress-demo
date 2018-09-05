@@ -1,5 +1,5 @@
 import {JetView} from "webix-jet";
-import {notifications} from "models/notifications";
+import {getNotifications} from "models/notifications";
 
 export default class NotificationView extends JetView {
 	config(){
@@ -10,6 +10,7 @@ export default class NotificationView extends JetView {
 				rows:[
 					{
 						view:"list",
+						localId:"list",
 						borderless:true,
 						css:"notifications",
 						width:250, height:250,
@@ -32,11 +33,10 @@ export default class NotificationView extends JetView {
 			}
 		};
 	}
-	init(view){
-		view.queryView({view:"list"}).sync(notifications);
+	init(){
+		this.$$("list").sync(getNotifications());
 	}
-	showLatest(pos){
+	showWindow(pos){
 		this.getRoot().show(pos);
-		//this.app.callEvent("read:notifications");
 	}
 }

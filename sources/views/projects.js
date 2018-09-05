@@ -24,9 +24,4 @@ export default class ProjectsView extends JetView {
 			]
 		};
 	}
-	// commented until i find a solution to save both this
-	// and filtering from a text input
-	// ready(){
-	// 	webix.delay(() => this.$$("side:menu").select("all"),null,null,100);
-	// }
 }

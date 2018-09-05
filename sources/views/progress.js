@@ -35,8 +35,9 @@ export default class ProgressView extends JetView {
 	}
 	init(){
 		let chart = this.$$("progress");
-		this.on(this.app,"person:select",(name,progress) => {
-			chart.parse(progress);
+		this.on(this.app,"person:select",person => {
+			chart.parse(webix.copy(person.progress));
+			const name = person.fname + " " + person.lname;
 			this.newLegend(name);
 		});
 	}
@@ -44,7 +45,7 @@ export default class ProgressView extends JetView {
 		let chart = this.$$("progress");
 		chart.define("legend", {
 			values:[
-				{text:name, color:"#1CA1C1"}
+				{ text:name, color:"#1CA1C1" }
 			],
 			align:"right", layout:"x", valign:"bottom", margin:1, padding:10,
 			marker:{

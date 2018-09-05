@@ -66,5 +66,6 @@ export default {
 	"The task was completed":"Задача выполнена",
 	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу",
 	"Week":"Неделя",
-	"tasks completed":"заданий выполнено"
+	"tasks completed":"заданий выполнено",
+	"Go back to the dashboard":"Вернуться к дашборду"
 };

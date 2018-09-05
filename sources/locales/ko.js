@@ -66,5 +66,6 @@ export default {
 	"The task was completed":"작업이 완료되었습니다.",
 	"Click on the red clock to complete the task":"작업을 완료하려면 빨간색 시계를 클릭하십시오.",
 	"Week":"주",
-	"tasks completed":"작업 완료 됨"
+	"tasks completed":"작업 완료 됨",
+	"Go back to the dashboard":"대시 보드로 돌아 가기"
 };

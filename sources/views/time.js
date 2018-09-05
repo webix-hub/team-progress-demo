@@ -1,10 +1,11 @@
 import {JetView} from "webix-jet";
 
-export default class TimeDonut extends JetView {
+export default class TimeView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
 		return {
-			type:"clean", rows:[
+			type:"clean",
+			rows:[
 				{ template:_("Hours spent, %"), type:"header" },
 				{
 					localId:"hours",
@@ -31,6 +32,8 @@ export default class TimeDonut extends JetView {
 		};
 	}
 	init(){
-		this.on(this.app,"person:select",(nm,prgs,id,hours) => this.$$("hours").parse(hours));
+		this.on(this.app,"person:select",person => {
+			this.$$("hours").parse(webix.copy(person.hours));
+		});
 	}
 }

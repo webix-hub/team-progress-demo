@@ -1,11 +1,14 @@
 import {JetView} from "webix-jet";
 import {tasks} from "models/tasks";
-import {persons} from "models/persoptions";
-import {projects} from "models/projoptions";
+import {getPersons} from "models/persoptions";
+import {getProjects} from "models/projoptions";
 
 export default class TasksView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
+		const persons = getPersons();
+		const projects = getProjects();
+		const date_format = webix.Date.dateToStr("%d %M %y");
 		return {
 			view:"datatable",
 			gravity:2,
@@ -46,7 +49,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"start", fillspace:1,
-					format:webix.Date.dateToStr("%d %M %y"),
+					format:date_format,
 					sort:"date", tooltip:_("The task was created"),
 					header:_("Start")
 				},
@@ -57,16 +60,15 @@ export default class TasksView extends JetView {
 						return obj.end ? _("The task was completed") : _("Click on the red clock to complete the task");
 					},
 					template: obj => {
-						const format = webix.Date.dateToStr("%d %M %y");
 						if (!obj.end)
 							return _("incomplete");
-						else return format(obj.end);
+						else return date_format(obj.end);
 					}
 				}
 			],
 			on:{
 				onAfterSelect:function(row){
-					const user = this.$scope.getRoot().getItem(row.id).user;
+					const user = this.getItem(row.id).user;
 					this.$scope.app.callEvent("task:select",[user]);
 					this.showItem(row.id);
 				}
@@ -80,11 +82,11 @@ export default class TasksView extends JetView {
 			}
 		};
 	}
-	init(view){
+	init(view,url){
 		view.sync(tasks);
 
-		this.on(this.app,"person:select",(name,pr,id) => {
-			let res = tasks.find((obj) => id == obj.user);
+		this.on(this.app,"person:select",person => {
+			let res = tasks.find((obj) => person.id == obj.user);
 			view.unselect();
 			if (res.length){
 				for (let i = 0; i < res.length; i++){
@@ -96,8 +98,10 @@ export default class TasksView extends JetView {
 		this.on(this.app,"add:task",task => {
 			tasks.add(task);
 			view.showItem(view.getLastId());
-			const proj = this.getParentView().$$("side:menu").getSelectedId();
-			if (proj) this.app.callEvent("tasks:filter",[proj]);
+			if (url[0].page === "projects"){
+				const proj = this.getParentView().$$("side:menu").getSelectedId();
+				if (proj) this.app.callEvent("tasks:filter",[proj]);
+			}
 		});
 
 		this.on(this.app,"tasks:filter",id => {

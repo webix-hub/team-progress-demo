@@ -1,4 +1,8 @@
-export const stats = [
+export function getStats(){
+	return stats;
+}
+
+const stats = [
 	{"week":1,"tasks17":27},
 	{"week":2,"tasks18":17},
 	{"week":4,"tasks17":39,"tasks18":25},

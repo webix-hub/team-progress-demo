@@ -1,7 +1,7 @@
 import {JetView} from "webix-jet";
 import PersonsView from "views/persons";
 import StatisticsView from "views/statistics";
-import TimeDonut from "views/time";
+import TimeView from "views/time";
 import ProgressView from "views/progress";
 import TasksView from "views/tasks";
 import CompareView from "views/compare";
@@ -19,15 +19,13 @@ export default class DashboardView extends JetView{
 						{
 							type:"wide",
 							cols:[
-								TimeDonut,
-								ProgressView
+								TimeView, ProgressView
 							]
 						},
 						{
 							type:"wide",
 							cols:[
-								TasksView,
-								CompareView
+								TasksView, CompareView
 							]
 						}
 					]

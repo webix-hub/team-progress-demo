@@ -1,11 +1,11 @@
 import {JetView} from "webix-jet";
-import ToolView from "views/toolbar";
+import ToolbarView from "views/toolbar";
 
 export default class TopView extends JetView {
 	config(){
 		return {
 			rows:[
-				ToolView,
+				ToolbarView,
 				{ $subview:true }
 			]
 		};

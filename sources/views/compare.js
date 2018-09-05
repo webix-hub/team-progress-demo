@@ -1,5 +1,5 @@
 import {JetView} from "webix-jet";
-import {projects} from "models/projects";
+import {getProjects} from "models/projects";
 
 export default class CompareView extends JetView {
 	config(){
@@ -52,6 +52,6 @@ export default class CompareView extends JetView {
 		};
 	}
 	init(){
-		this.$$("chart").parse(projects);
+		this.$$("chart").parse(getProjects());
 	}
 }

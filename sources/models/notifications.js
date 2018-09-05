@@ -1,4 +1,8 @@
-export const notifications = new webix.DataCollection({
+export function getNotifications(){
+	return notifications;
+}
+
+const notifications = new webix.DataCollection({
 	data:[
 		{ title:"Latest tasks in your projects", message:"Top margin in a popup window is smaller than the...", read:0 },
 		{ title:"Autocat report", message:"Navigations problem in the left menu", read:0 },

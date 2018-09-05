@@ -1,5 +1,5 @@
 import {JetView} from "webix-jet";
-import {stats} from "models/statistics";
+import {getStats} from "models/statistics";
 
 export default class StatisticsView extends JetView{
 	config(){
@@ -49,8 +49,7 @@ export default class StatisticsView extends JetView{
 						{
 							value:"#tasks18#",
 							item:{
-								borderColor:"#8664C6", borderWidth:2,
-								radius:4
+								borderColor:"#8664C6", borderWidth:2, radius:4
 							},
 							line:{ color:"#8664C6", width:2 },
 							tooltip:{
@@ -64,6 +63,6 @@ export default class StatisticsView extends JetView{
 		};
 	}
 	init(){
-		this.$$("stats").parse(stats);
+		this.$$("stats").parse(getStats());
 	}
 }

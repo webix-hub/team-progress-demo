@@ -66,5 +66,6 @@ export default {
 	"The task was completed":"任務完成了",
 	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務",
 	"Week":"週",
-	"tasks completed":"任務完成"
+	"tasks completed":"任務完成",
+	"Go back to the dashboard":"返回儀表板"
 };

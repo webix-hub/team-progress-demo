@@ -7,7 +7,9 @@ export default class PersonsView extends JetView {
 		return {
 			rows:[
 				{
-					view:"toolbar", elements:[
+					view:"toolbar",
+					localId:"toolbar",
+					elements:[
 						{ view:"label", label:_("Persons") },
 						{},
 						{
@@ -54,8 +56,7 @@ export default class PersonsView extends JetView {
 					on:{
 						onAfterSelect:(id) => {
 							const person = persons.getItem(id);
-							const name = person.fname + " " + person.lname;
-							this.app.callEvent("person:select",[name,person.progress,id,person.hours]);
+							this.app.callEvent("person:select",[person]);
 						}
 					}
 				}
@@ -81,10 +82,10 @@ export default class PersonsView extends JetView {
 		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
 	}
 	toggleTheme(theme){
-		let toolbar = this.getRoot().queryView({ view:"toolbar" });
+		let toolbar = this.$$("toolbar").$view;
 		if (theme === "dark")
-			toolbar.define("css","webix_dark");
+			webix.html.addCss(toolbar,"webix_dark");
 		else
-			webix.html.removeCss(toolbar.getNode(),"webix_dark");
+			webix.html.removeCss(toolbar,"webix_dark");
 	}
 }

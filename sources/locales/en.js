@@ -66,5 +66,6 @@ export default {
 	"The task was completed":"The task was completed",
 	"Click on the red clock to complete the task":"Click on the red clock to complete the task",
 	"Week":"Week",
-	"tasks completed":"tasks completed"
+	"tasks completed":"tasks completed",
+	"Go back to the dashboard":"Go back to the dashboard"
 };

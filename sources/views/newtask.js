@@ -1,10 +1,13 @@
 import {JetView} from "webix-jet";
-import {persons} from "models/persoptions";
-import {projects} from "models/projoptions";
+import {getPersons} from "models/persoptions";
+import {getProjects} from "models/projoptions";
 
 export default class NewTaskPopup extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
+		const persons = getPersons();
+		const projects = getProjects();
+
 		return {
 			view:"window",
 			position:"center",
@@ -12,12 +15,10 @@ export default class NewTaskPopup extends JetView {
 			head:_("Add a new task"),
 			body:{
 				view:"form",
+				localId:"form",
 				elementsConfig:{ labelPosition:"top" },
 				rows:[
-					{
-						view:"text", label:_("Task"), name:"task",
-						width:500
-					},
+					{ view:"text", label:_("Task"), name:"task", width:500 },
 					{
 						cols:[
 							{
@@ -34,15 +35,11 @@ export default class NewTaskPopup extends JetView {
 						cols:[
 							{
 								view:"button", value:_("Cancel"),
-								click:() => {
-									this.getBack();
-								}
+								click:() => this.getBack()
 							},
 							{
 								view:"button", value:_("Add"), type:"form",
-								click:() => {
-									this.saveTask();
-								}
+								click:() => this.saveTask()
 							}
 						]
 					}
@@ -59,12 +56,12 @@ export default class NewTaskPopup extends JetView {
 	}
 	getBack(){
 		this.getRoot().hide();
-		this.getRoot().getBody().clear();
-		this.getRoot().getBody().clearValidation();
+		this.$$("form").clear();
+		this.$$("form").clearValidation();
 	}
 	saveTask(){
-		const task = this.getRoot().getBody().getValues();
-		if (this.getRoot().getBody().validate()){
+		const task = this.$$("form").getValues();
+		if (this.$$("form").validate()){
 			this.app.callEvent("add:task",[task]);
 			this.getBack();
 		}

@@ -8,7 +8,8 @@ export default class MyApp extends JetApp{
 			version : VERSION,
 			router 	: BUILD_AS_MODULE ? EmptyRouter : HashRouter,
 			debug 	: !PRODUCTION,
-			start 	: "/top/dashboard"
+			start 	: "/top/dashboard",
+			theme	: webix.storage.local.get("curr_theme_team_progress") || "light"
 		};
 
 		super({ ...defaults, ...config });
