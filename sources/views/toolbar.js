@@ -10,11 +10,11 @@ export default class ToolbarView extends JetView{
 		return {
 			view:"toolbar",
 			height:56,
-			visibleBatch:"default",
 			elements:[
 				{ css:"logo", width:63, batch:"default" },
 				{
-					paddingY:4, rows:[
+					paddingY:4,
+					rows:[
 						{
 							cols:[
 								{
@@ -24,8 +24,10 @@ export default class ToolbarView extends JetView{
 									batch:"default"
 								},
 								{ 
-									view:"button", type:"form",
-									label:_("Add a task"), width:160,
+									view:"button",
+									type:"form",
+									label:_("Add a task"),
+									width:160,
 									inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()
@@ -35,6 +37,7 @@ export default class ToolbarView extends JetView{
 									localId:"search",
 									margin:0,
 									batch:"search",
+									hidden:true,
 									cols:[
 										{
 											view:"text", localId:"lookup",
@@ -55,7 +58,7 @@ export default class ToolbarView extends JetView{
 										},
 										{
 											view:"icon", icon:"close", css:"close",
-											click:() => this.getRoot().showBatch("default")
+											click:() => this.toggleBatches("default","search")
 										}
 									]
 								},
@@ -65,7 +68,7 @@ export default class ToolbarView extends JetView{
 									click:() => {
 										const lookup = this.$$("lookup").getValue();
 										if (!this.$$("search").isVisible())
-											this.getRoot().showBatch("search");
+											this.toggleBatches("search","default");
 										else if (lookup)
 											this.show("projects?lookup="+lookup);
 									}
@@ -135,5 +138,13 @@ export default class ToolbarView extends JetView{
 		}
 		else
 			webix.html.removeCss(toolbar,"webix_dark");
+	}
+	toggleBatches(a,b){
+		const s_btns = this.getRoot().queryView({ batch:a },"all");
+		for (let i = 0; i < s_btns.length; i++)
+			s_btns[i].show();
+		const h_btns = this.getRoot().queryView({ batch:b },"all");
+		for (let i = 0; i < h_btns.length; i++)
+			h_btns[i].hide();
 	}
 }
