@@ -1,12 +1,12 @@
 import {JetView} from "webix-jet";
-import NotificationView from "views/notifications";
+import NotificationPopup from "views/notifications";
 import SettingsPopup from "views/settings";
 import NewTaskPopup from "views/newtask";
 
 export default class ToolbarView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
-
+		
 		return {
 			view:"toolbar", height:56,
 			visibleBatch:"default",
@@ -69,17 +69,10 @@ export default class ToolbarView extends JetView{
 					tooltip:_("Open the list of all tasks"),
 					localId:"favs", batch:"default",
 					click:function(){
-						if (this.config.icon.indexOf("check") !== -1){
+						if (this.config.icon.indexOf("check") !== -1)
 							this.$scope.show("projects");
-							this.config.icon = "view-dashboard";
-							this.config.tooltip = _("Go back to the dashboard");
-						}
-						else {
+						else
 							this.$scope.show("dashboard");
-							this.config.icon = "bookmark-check";
-							this.config.tooltip = _("Open the list of all tasks");
-						}
-						this.refresh();
 					}
 				},
 				{
@@ -91,9 +84,9 @@ export default class ToolbarView extends JetView{
 					}
 				},
 				{
-					template:"<image class='userphoto' src='data/photos/micha.jpg' title=" +
-						_("Change\u00a0your\u00a0personal\u00a0settings") + ">",
-					width:58, borderless:true,
+					template:`<image class="userphoto" src="data/photos/micha.jpg" title=" ${_("Change your personal settings")}">`,
+					width:58,
+					borderless:true,
 					batch:"default",
 					onClick:{
 						"userphoto":function(){
@@ -106,23 +99,24 @@ export default class ToolbarView extends JetView{
 		};
 	}
 	init(){
-		this.notifications = this.ui(NotificationView);
+		this.notifications = this.ui(NotificationPopup);
 		this.settings = this.ui(SettingsPopup);
 		this.newtask = this.ui(NewTaskPopup);
 
-		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
-		if (curr_theme)
-			this.toggleTheme(curr_theme);
-		
-		const curl = this.getUrl();
-		if (curl[1].page === "projects"){
-			let nav_btn = this.$$("favs");
+		this.toggleTheme(this.app.config.theme);
+	}
+	urlChange(ui,url){
+		const _ = this.app.getService("locale")._;
+		let nav_btn = this.$$("favs");
+		if (url[1].page === "projects"){
 			nav_btn.config.icon = "view-dashboard";
-			nav_btn.config.tooltip = "Go back to the dashboard";
-			nav_btn.refresh();
+			nav_btn.config.tooltip = _("Go back to the dashboard");
 		}
-
-		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
+		else if (url[1].page === "dashboard"){
+			nav_btn.config.icon = "bookmark-check";
+			nav_btn.config.tooltip = _("Open the list of all tasks");
+		}
+		nav_btn.refresh();
 	}
 	toggleTheme(theme){
 		let toolbar = this.getRoot().$view;

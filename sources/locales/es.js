@@ -4,7 +4,7 @@ export default {
 	"Click to search a task":"Haga clic para buscar una tarea",
 	"Open the list of all tasks":"Abra la lista de todas las tareas",
 	"View the latest notifications":"Ver las últimas notificaciones",
-	"Change\u00a0your\u00a0personal\u00a0settings":"Cambia tu configuración personal",
+	"Change your personal settings":"Cambia tu configuración personal",
 	"Pick your side of the Force":"Elige tu lado de la Fuerza",
 	"Dark":"Oscuro",
 	"Light":"Ligero",

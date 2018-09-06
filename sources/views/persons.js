@@ -70,16 +70,12 @@ export default class PersonsView extends JetView {
 			list.select(list.getFirstId());
 		});
 
-		const curr_theme = webix.storage.local.get("curr_theme_team_progress");
-		if (curr_theme)
-			this.toggleTheme(curr_theme);
+		this.toggleTheme(this.app.config.theme);
 
 		this.on(this.app,"task:select", id => {
 			list.select(id);
 			list.showItem(id);
 		});
-
-		this.on(this.app,"theme:change",theme => this.toggleTheme(theme));
 	}
 	toggleTheme(theme){
 		let toolbar = this.$$("toolbar").$view;

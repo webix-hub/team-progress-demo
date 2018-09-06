@@ -23,13 +23,15 @@ export default class SettingsPopup extends JetView {
 						on:{
 							onChange:newv => {
 								let theme = newv ? "dark" : "light";
-								this.app.callEvent("theme:change",[theme]);
+								this.app.config.theme = theme;
 								webix.storage.local.put("curr_theme_team_progress", theme);
+								webix.delay(() => this.app.refresh(),null,null,500);
 							}
 						}
 					},
 					{
-						view:"combo", label:_("Pick a language"),
+						view:"combo", localId:"langs",
+						label:_("Pick a language"),
 						labelPosition:"top", value:lang,
 						options:[
 							{ id:"en", code:"US", value:"English" },
@@ -50,10 +52,10 @@ export default class SettingsPopup extends JetView {
 			}
 		};
 	}
-	toggleLanguage(nl,cnt){
+	toggleLanguage(newlang,country){
 		const langs = this.app.getService("locale");
-		this.app.callEvent("lang:change",[nl,cnt]);
-		webix.delay(() => langs.setLang(nl));
+		webix.i18n.setLocale(newlang+"-"+country);
+		webix.delay(() => langs.setLang(newlang));
 	}
 	showWindow(pos){
 		this.getRoot().show(pos);

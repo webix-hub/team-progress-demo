@@ -4,7 +4,7 @@ export default {
 	"Click to search a task":"할 일을 검색하려면 클릭하십시오.",
 	"Open the list of all tasks":"모든 작업 목록 열기",
 	"View the latest notifications":"최신 알림보기",
-	"Change\u00a0your\u00a0personal\u00a0settings":"개인 설정 변경",
+	"Change your personal settings":"개인 설정 변경",
 	"Pick your side of the Force":"포스의 편을 들자.",
 	"Dark":"어두운",
 	"Light":"빛",

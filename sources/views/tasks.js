@@ -115,11 +115,6 @@ export default class TasksView extends JetView {
 			else
 				view.hideOverlay();
 		});
-
-		this.on(this.app,"lang:change", (nl,cnt) => {
-			webix.i18n.setLocale(nl+"-"+cnt);
-			this.getRoot().refresh();
-		});
 	}
 	urlChange(){
 		const param = this.getParam("lookup");

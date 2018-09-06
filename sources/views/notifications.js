@@ -1,7 +1,7 @@
 import {JetView} from "webix-jet";
 import {getNotifications} from "models/notifications";
 
-export default class NotificationView extends JetView {
+export default class NotificationPopup extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
 		return {

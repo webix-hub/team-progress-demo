@@ -4,7 +4,7 @@ export default {
 	"Click to search a task":"Найти задачу",
 	"Open the list of all tasks":"Открыть список всех задач",
 	"View the latest notifications":"Просмотреть список последних уведомлений",
-	"Change\u00a0your\u00a0personal\u00a0settings":"Cambia tu configuración personal",
+	"Change your personal settings":"Cambia tu configuración personal",
 	"Pick your side of the Force":"Выберите сторону Силы",
 	"Dark":"Темная",
 	"Light":"Светлая",

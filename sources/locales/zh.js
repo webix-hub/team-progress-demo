@@ -4,7 +4,7 @@ export default {
 	"Click to search a task":"單擊以搜索任務",
 	"Open the list of all tasks":"打開所有任務列表",
 	"View the latest notifications":"查看最新通知",
-	"Change\u00a0your\u00a0personal\u00a0settings":"更改您的個人設置",
+	"Change your personal settings":"更改您的個人設置",
 	"Pick your side of the Force":"選擇你的力量",
 	"Dark":"黑暗",
 	"Light":"光",
