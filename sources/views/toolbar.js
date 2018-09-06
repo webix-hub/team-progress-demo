@@ -18,7 +18,7 @@ export default class ToolbarView extends JetView{
 					batch:"default"
 				},
 				{ 
-					view:"button", type:"form", icon:"plus",
+					view:"button", type:"form",
 					label:_("Add a task"), width:160,
 					batch:"default",
 					click:() => this.newtask.showWindow()
@@ -47,8 +47,7 @@ export default class ToolbarView extends JetView{
 							}
 						},
 						{
-							view:"button", type:"icon", icon:"close",
-							css:"toolbar_button close", width:40,
+							view:"icon", icon:"close", css:"close",
 							click:() => this.getRoot().showBatch("default")
 						}
 					]

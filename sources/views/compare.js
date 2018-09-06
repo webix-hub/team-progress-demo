@@ -12,7 +12,8 @@ export default class CompareView extends JetView {
 					view:"chart",
 					type:"barH",
 					radius:0,
-					barWidth:20,
+					barWidth:16,
+					border:false,
 					yAxis:{
 						template:"#project#", lines:false, color:"#EDEFF0"
 					},
@@ -25,7 +26,7 @@ export default class CompareView extends JetView {
 							{ text:"2018",color:"#1CA1C1" }
 						],
 						valign:"bottom", align:"right", layout:"x",
-						margin:1, padding:9,
+						margin:4, padding:10,
 						marker:{
 							type:"round", width:8, height:9
 						}
@@ -46,7 +47,7 @@ export default class CompareView extends JetView {
 							}
 						}
 					],
-					padding:{ left:100, top:5 }
+					padding:{ left:100, top:5, bottom:44 }
 				}
 			]
 		};

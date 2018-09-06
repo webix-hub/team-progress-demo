@@ -15,6 +15,10 @@ export default class TimeView extends JetView {
 					color:"#color#",
 					innerRadius:65,
 					shadow:0,
+					lineColor:obj => obj.color,
+					tooltip:{
+						template:"#hours#"
+					},
 					legend:{
 						width:100,
 						align:"right",

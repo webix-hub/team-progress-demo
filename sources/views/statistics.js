@@ -13,7 +13,7 @@ export default class StatisticsView extends JetView{
 					type:"scatter",
 					xValue:"#week#",
 					padding:{
-						top:10
+						top:4, bottom:44
 					},
 					xAxis:{
 						start:0, end:53, step:2, lines:false, color:"#EDEFF0"
@@ -27,7 +27,7 @@ export default class StatisticsView extends JetView{
 							{ text:"2018", color:"#1CA1C1" }
 						],
 						align:"right", layout:"x", valign:"bottom",
-						margin:1, padding:9,
+						margin:4, padding:10,
 						marker:{
 							type:"round", width:8, height:9
 						}

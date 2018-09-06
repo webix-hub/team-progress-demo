@@ -47,7 +47,7 @@ export default class ProgressView extends JetView {
 			values:[
 				{ text:name, color:"#1CA1C1" }
 			],
-			align:"right", layout:"x", valign:"bottom", margin:1, padding:10,
+			align:"right", layout:"x", valign:"bottom", margin:4, padding:10,
 			marker:{
 				type:"round", width:8, height:9
 			}

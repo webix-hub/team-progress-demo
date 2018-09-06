@@ -32,18 +32,14 @@
 .logo{
 	background:url(webix.svg) 12px 4px no-repeat;
 }
-.toolbar_button button{
-	padding:0;
-	text-align:center;
-}
-.toolbar_button.close button{
-	background-color:rgba(255, 91, 76, 0.671);
-}
-.toolbar_button.close button:hover{
+.webix_el_icon.close > button:hover::before,
+.webix_toolbar.webix_layout_toolbar.webix_dark .webix_el_icon.close  > button:hover::before{
 	background-color:rgba(255, 91, 76, 0.548);
 }
 .webix_el_label.main_label{
 	line-height:44px;
+	padding-left:2px;
+	margin-left:2px !important;
 }
 /* grid */
 .complete{
