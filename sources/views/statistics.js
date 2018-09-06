@@ -29,7 +29,7 @@ export default class StatisticsView extends JetView{
 						align:"right", layout:"x", valign:"bottom",
 						margin:4, padding:10,
 						marker:{
-							type:"round", width:8, height:9
+							type:"round", width:7, height:8
 						}
 					},
 					series:[

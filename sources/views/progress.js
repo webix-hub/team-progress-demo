@@ -49,7 +49,7 @@ export default class ProgressView extends JetView {
 			],
 			align:"right", layout:"x", valign:"bottom", margin:4, padding:10,
 			marker:{
-				type:"round", width:8, height:9
+				type:"round", width:7, height:8
 			}
 		});
 		chart.refresh();

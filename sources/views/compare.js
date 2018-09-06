@@ -28,7 +28,7 @@ export default class CompareView extends JetView {
 						valign:"bottom", align:"right", layout:"x",
 						margin:4, padding:10,
 						marker:{
-							type:"round", width:8, height:9
+							type:"round", width:7, height:8
 						}
 					},
 					series:[

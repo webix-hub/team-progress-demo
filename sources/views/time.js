@@ -25,7 +25,7 @@ export default class TimeView extends JetView {
 						valign:"middle",
 						template:obj => _(obj.activity),
 						marker:{
-							type:"round", width:8, height:9
+							type:"round", width:7, height:8
 						}
 					},
 					padding:{
