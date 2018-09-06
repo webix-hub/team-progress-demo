@@ -8,82 +8,93 @@ export default class ToolbarView extends JetView{
 		const _ = this.app.getService("locale")._;
 		
 		return {
-			view:"toolbar", height:56,
+			view:"toolbar",
+			height:56,
 			visibleBatch:"default",
 			elements:[
 				{ css:"logo", width:63, batch:"default" },
 				{
-					view:"label", template:_("Team Progress"),
-					width:200, css:"main_label",
-					batch:"default"
-				},
-				{ 
-					view:"button", type:"form",
-					label:_("Add a task"), width:160,
-					batch:"default",
-					click:() => this.newtask.showWindow()
-				},
-				{ batch:"default" },
-				{
-					localId:"search",
-					margin:0,
-					batch:"search",
-					cols:[
+					paddingY:4, rows:[
 						{
-							view:"text", localId:"lookup",
-							on:{
-								onKeyPress(code){
-									const lookup = this.getValue();
-									if (lookup && code === 13){
-										const nav_btn = this.$scope.$$("favs");
-										if (nav_btn.config.icon.indexOf("check") !== -1){
-											nav_btn.config.icon = "view-dashboard";
-											nav_btn.config.tooltip = "Go back to the dashboard";
-											nav_btn.refresh();
+							cols:[
+								{
+									view:"label",
+									template:_("Team Progress"),
+									width:200,
+									batch:"default"
+								},
+								{ 
+									view:"button", type:"form",
+									label:_("Add a task"), width:160,
+									inputHeight:40,
+									batch:"default",
+									click:() => this.newtask.showWindow()
+								},
+								{ batch:"default" },
+								{
+									localId:"search",
+									margin:0,
+									batch:"search",
+									cols:[
+										{
+											view:"text", localId:"lookup",
+											on:{
+												onKeyPress(code){
+													const lookup = this.getValue();
+													if (lookup && code === 13){
+														const nav_btn = this.$scope.$$("favs");
+														if (nav_btn.config.icon.indexOf("check") !== -1){
+															nav_btn.config.icon = "view-dashboard";
+															nav_btn.config.tooltip = "Go back to the dashboard";
+															nav_btn.refresh();
+														}
+														this.$scope.show("projects?lookup="+lookup);
+													}
+												}
+											}
+										},
+										{
+											view:"icon", icon:"close", css:"close",
+											click:() => this.getRoot().showBatch("default")
 										}
-										this.$scope.show("projects?lookup="+lookup);
+									]
+								},
+								{
+									view:"icon", icon:"magnify",
+									tooltip:_("Click to search a task"),
+									click:() => {
+										const lookup = this.$$("lookup").getValue();
+										if (!this.$$("search").isVisible())
+											this.getRoot().showBatch("search");
+										else if (lookup)
+											this.show("projects?lookup="+lookup);
+									}
+								},
+								{
+									view:"icon", icon:"bookmark-check",
+									tooltip:_("Open the list of all tasks"),
+									localId:"favs", batch:"default",
+									click:function(){
+										if (this.config.icon.indexOf("check") !== -1)
+											this.$scope.show("projects");
+										else
+											this.$scope.show("dashboard");
+									}
+								},
+								{
+									view:"icon", icon:"bell", badge:2,
+									batch:"default",
+									tooltip:_("View the latest notifications"),
+									click:function(){
+										this.$scope.notifications.showWindow(this.$view);
 									}
 								}
-							}
-						},
-						{
-							view:"icon", icon:"close", css:"close",
-							click:() => this.getRoot().showBatch("default")
+							]
 						}
 					]
 				},
 				{
-					view:"icon", icon:"magnify",
-					tooltip:_("Click to search a task"),
-					click:() => {
-						const lookup = this.$$("lookup").getValue();
-						if (!this.$$("search").isVisible())
-							this.getRoot().showBatch("search");
-						else if (lookup)
-							this.show("projects?lookup="+lookup);
-					}
-				},
-				{
-					view:"icon", icon:"bookmark-check",
-					tooltip:_("Open the list of all tasks"),
-					localId:"favs", batch:"default",
-					click:function(){
-						if (this.config.icon.indexOf("check") !== -1)
-							this.$scope.show("projects");
-						else
-							this.$scope.show("dashboard");
-					}
-				},
-				{
-					view:"icon", icon:"bell", badge:2,
-					batch:"default",
-					tooltip:_("View the latest notifications"),
-					click:function(){
-						this.$scope.notifications.showWindow(this.$view);
-					}
-				},
-				{
-					template:`<image class="userphoto" src="data/photos/micha.jpg" title=" ${_("Change your personal settings")}">`,
+					template:`<image class="userphoto" src="data/photos/micha.jpg" title="${_("Change your personal settings")}">`,
 					width:58,
 					borderless:true,
 					batch:"default",
