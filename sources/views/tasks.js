@@ -78,6 +78,7 @@ export default class TasksView extends JetView {
 					const new_status = !this.getItem(id.row).status;
 					const end_date = new_status ? new Date() : null;
 					this.updateItem(id.row,{ status:new_status,end:end_date });
+					return false;
 				}
 			}
 		};
