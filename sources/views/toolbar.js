@@ -13,7 +13,7 @@ export default class ToolbarView extends JetView{
 			elements:[
 				{ css:"logo", width:63, batch:"default" },
 				{
-					paddingY:4,
+					paddingY:7,
 					rows:[
 						{
 							cols:[
