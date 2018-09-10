@@ -1,32 +1,32 @@
 /* list of persons */
-.userphoto, .userpic{
+.userphoto{
+	display:inline-block;
 	border-radius:25px;
-	width:40px;
-	height:40px;
+	width:48px;
+	height:48px;
 	float:left;
-	margin-right:15px;
-	cursor:pointer;
 }
-.userpic{
-	background-color:#1a73c7;
-  	color:#fff;
-  	text-align:center;
-	line-height:53px;
-	font-size:31px;
+.text {
+	padding:4px 4px 4px 16px;
+	display:inline-block;
 }
 .username{
+	font-size:14px;
+	letter-spacing:0.2px;
 	color:#313131;
 	font-weight:500;
-	line-height:26px;
+	line-height:20px;
+	display:block;
 }
 .money{
 	color:#475466;
 	display:block;
+	letter-spacing:0.2px;
+	line-height:20px; 
 }
 .persons_list .webix_list_item,
 .persons_list .webix_list_item.webix_selected{
-	padding:10px;
-	line-height:20px;
+	padding:8px 12px;
 }
 /* toolbar buttons */
 .logo{
