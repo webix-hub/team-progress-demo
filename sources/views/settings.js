@@ -6,7 +6,7 @@ export default class SettingsPopup extends JetView {
 		const lang = this.app.getService("locale").getLang();
 
 		let curr_theme = this.app.config.theme;
-		curr_theme = (curr_theme === "dark") ? 1 : 0;
+		curr_theme = (curr_theme === "webix_dark") ? 1 : 0;
 		
 		return {
 			view:"popup",
@@ -22,7 +22,7 @@ export default class SettingsPopup extends JetView {
 						value:curr_theme,
 						on:{
 							onChange:newv => {
-								let theme = newv ? "dark" : "light";
+								let theme = newv ? "webix_dark" : "";
 								this.app.config.theme = theme;
 								webix.storage.local.put("curr_theme_team_progress", theme);
 								webix.delay(() => this.app.refresh(),null,null,500);

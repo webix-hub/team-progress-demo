@@ -6,9 +6,11 @@ import NewTaskPopup from "views/newtask";
 export default class ToolbarView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
+		const theme = this.app.config.theme;
 		
 		return {
 			view:"toolbar",
+			css:theme,
 			height:56,
 			elements:[
 				{ css:"logo", width:53, batch:"default" },
@@ -118,8 +120,6 @@ export default class ToolbarView extends JetView{
 		this.settings = this.ui(SettingsPopup);
 		this.newtask = this.ui(NewTaskPopup);
 
-		this.toggleTheme(this.app.config.theme);
-
 		this.on(this.app,"read:notifications",() => {
 			this.$$("bell").config.badge = 0;
 			this.$$("bell").refresh();
@@ -143,14 +143,6 @@ export default class ToolbarView extends JetView{
 			nav_btn.config.tooltip = _("Open the list of all tasks");
 		}
 		nav_btn.refresh();
-	}
-	toggleTheme(theme){
-		let toolbar = this.getRoot().$view;
-		if (theme === "dark"){
-			webix.html.addCss(toolbar,"webix_dark");
-		}
-		else
-			webix.html.removeCss(toolbar,"webix_dark");
 	}
 	toggleBatches(a,b){
 		const s_btns = this.getRoot().queryView({ batch:a },"all");

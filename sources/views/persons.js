@@ -4,10 +4,12 @@ import {persons} from "models/persons";
 export default class PersonsView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
+		const theme = this.app.config.theme;
 		return {
 			rows:[
 				{
 					view:"toolbar",
+					css:theme,
 					localId:"toolbar",
 					elements:[
 						{ view:"label", label:_("Persons") },
@@ -63,18 +65,9 @@ export default class PersonsView extends JetView {
 			list.select(list.getFirstId());
 		});
 
-		this.toggleTheme(this.app.config.theme);
-
 		this.on(this.app,"task:select", id => {
 			list.select(id);
 			list.showItem(id);
 		});
-	}
-	toggleTheme(theme){
-		let toolbar = this.$$("toolbar").$view;
-		if (theme === "dark")
-			webix.html.addCss(toolbar,"webix_dark");
-		else
-			webix.html.removeCss(toolbar,"webix_dark");
 	}
 }
