@@ -87,7 +87,7 @@ export default class ToolbarView extends JetView{
 								},
 								{
 									view:"icon", icon:"bell", badge:2,
-									batch:"default",
+									batch:"default", localId:"bell",
 									tooltip:_("View the latest notifications"),
 									click:function(){
 										this.$scope.notifications.showWindow(this.$view);
@@ -119,6 +119,17 @@ export default class ToolbarView extends JetView{
 		this.newtask = this.ui(NewTaskPopup);
 
 		this.toggleTheme(this.app.config.theme);
+
+		this.on(this.app,"read:notifications",() => {
+			this.$$("bell").config.badge = 0;
+			this.$$("bell").refresh();
+
+			setTimeout(() => {
+				this.$$("bell").config.badge += 1;
+				this.$$("bell").refresh();
+				this.app.callEvent("new:notification");
+			},10000);
+		});
 	}
 	urlChange(ui,url){
 		const _ = this.app.getService("locale")._;
