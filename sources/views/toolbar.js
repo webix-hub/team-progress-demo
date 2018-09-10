@@ -39,6 +39,7 @@ export default class ToolbarView extends JetView{
 									batch:"search",
 									hidden:true,
 									cols:[
+										{ width:11 },
 										{
 											view:"text", localId:"lookup",
 											on:{
@@ -97,17 +98,18 @@ export default class ToolbarView extends JetView{
 					]
 				},
 				{
-					template:`<image class="userphoto" src="data/photos/micha.jpg" title="${_("Change your personal settings")}">`,
-					width:58,
+					template:`<image class="mainphoto" src="data/photos/micha.jpg" title="${_("Change your personal settings")}">`,
+					width:60,
 					borderless:true,
 					batch:"default",
 					onClick:{
-						"userphoto":function(){
+						"mainphoto":function(){
 							this.$scope.settings.showWindow(this.$view);
 							return false;
 						}
 					}
-				}
+				},
+				{ width:4 }
 			]
 		};
 	}
