@@ -6,7 +6,7 @@ export default class TimeView extends JetView {
 		return {
 			type:"clean",
 			rows:[
-				{ template:_("Hours spent, %"), type:"header" },
+				{ template:_("Hours spent, %"), type:"header", css:"webix_header chart_header" },
 				{
 					localId:"hours",
 					view:"chart",

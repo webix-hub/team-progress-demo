@@ -6,7 +6,7 @@ export default class ProgressView extends JetView {
 		return {
 			type:"clean", gravity:2,
 			rows:[
-				{ template:_("Individual employee's progress"), type:"header" },
+				{ template:_("Individual employee's progress"), type:"header", css:"webix_header chart_header" },
 				{
 					view:"chart",
 					localId:"progress",

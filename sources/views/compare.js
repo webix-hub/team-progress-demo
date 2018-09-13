@@ -6,7 +6,7 @@ export default class CompareView extends JetView {
 		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", rows:[
-				{ template:_("Total tasks by projects"), type:"header" },
+				{ template:_("Total tasks by projects"), type:"header", css:"webix_header chart_header" },
 				{
 					localId:"chart",
 					view:"chart",

@@ -69,7 +69,7 @@
 	background-color:rgb(153, 51, 102);
 }
 /* headers (templates) */
-.webix_header{
+.webix_view.chart_header{
 	text-align: center;
 }
 /* notifications */
