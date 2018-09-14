@@ -16,7 +16,8 @@ export default class StatisticsView extends JetView{
 						top:4, bottom:44
 					},
 					xAxis:{
-						start:0, end:53, step:2, lines:false, color:"#EDEFF0"
+						start:0, end:53, step:2, lines:false, color:"#EDEFF0",
+						template:obj => obj == 0 ? "" : obj
 					},
 					yAxis:{
 						start:0, step:25, end:100, color:"#fff", lineColor:"#EDEFF0"
