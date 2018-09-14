@@ -30,8 +30,7 @@ export default class PersonsView extends JetView {
 								this.$scope.$$("list").sort("fname",dir);
 								this.refresh();
 							}
-						},
-						{ width:6 }
+						}
 					]
 				},
 				{
