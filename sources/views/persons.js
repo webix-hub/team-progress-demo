@@ -15,7 +15,7 @@ export default class PersonsView extends JetView {
 						{ view:"label", label:_("Persons") },
 						{},
 						{
-							view:"icon", icon:"filter-variant",
+							view:"icon", icon:"arrow-down",
 							tooltip:_("Click to sort"),
 							click:function(){
 								let dir = "";
