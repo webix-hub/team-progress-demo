@@ -13,6 +13,7 @@ export default class ProgressView extends JetView {
 					type:"splineArea",
 					value:"#tasks#",
 					color:"#1CA1C1",
+					borderWidth:2,
 					alpha:0.1,
 					line:{
 						width:3
