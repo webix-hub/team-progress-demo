@@ -67,5 +67,17 @@ export default {
 	"Click on the red clock to complete the task":"Click on the red clock to complete the task",
 	"Week":"Week",
 	"tasks completed":"tasks completed",
-	"Go back to the dashboard":"Go back to the dashboard"
+	"Go back to the dashboard":"Go back to the dashboard",
+	"Ain't it amazing?":"Ain't it amazing?",
+	"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.":"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.",
+	"Components":"Components",
+	"Can you name all the Webix components that have been used to build the demo app?":"Can you name all the Webix components that have been used to build the demo app?",
+	"We miss you":"We miss you",
+	"Been pretty busy lately, haven't you? That's great! But also do not forget about us.":"Been pretty busy lately, haven't you? That's great! But also do not forget about us.",
+	"Have a nice day":"Have a nice day",
+	"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.":"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.",
+	"Colors and Languages":"Colors and Languages",
+	"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.":"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.",
+	"We love you":"We love you",
+	"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally.":"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally."
 };

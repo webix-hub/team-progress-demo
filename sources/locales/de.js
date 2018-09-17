@@ -67,5 +67,17 @@ export default {
 	"Click on the red clock to complete the task":"Klicke auf die rote Uhr, um die Aufgabe abzuschließen",
 	"Week":"Woche",
 	"tasks completed":"Aufgaben abgeschlossen",
-	"Go back to the dashboard":"Geh zurück zum Dashboard"
+	"Go back to the dashboard":"Geh zurück zum Dashboard",
+	"Ain't it amazing?":"Ist das nicht toll?",
+	"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.":"Ich meine die Aussicht von deinem Fenster aus. Auch wenn es zu städtisch oder zu industriell ist, hat seine Geometrie eine kuriose Schönheit.",
+	"Components":"Komponenten",
+	"Can you name all the Webix components that have been used to build the demo app?":"Können Sie alle Webix-Komponenten benennen, die zum Erstellen der Demo-App verwendet wurden?",
+	"We miss you":"Wir vermissen Ihnen",
+	"Been pretty busy lately, haven't you? That's great! But also do not forget about us.":"Sie waren in letzter Zeit ziemlich beschäftigt, nicht wahr? Das ist großartig! Aber vergessen Sie auch nicht über uns.",
+	"Have a nice day":"Ich wünsche Ihnen einen schönen Tag!",
+	"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.":"Lieber Kunde, wenn Sie dies lesen, wünschen wir Ihnen einen schönen Tag. Möge Glück und Erfolg Sie begleiten.",
+	"Colors and Languages":"Farben und Sprachen",
+	"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.":"Um eine Sprache oder ein Farbthema für die Demo-App auszuwählen, klicken Sie auf den Avatar in der oberen rechten Ecke.",
+	"We love you":"Wir lieben Ihnen",
+	"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally.":"Lieber Kunde, wir lieben Ihnen sehr. Wenn unsere Gefühle gegenseitig sind, kontaktieren Sie uns und laden Sie Webix herunter. Dann werden wir Ihnen ewig lieben."
 };

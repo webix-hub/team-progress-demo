@@ -67,5 +67,17 @@ export default {
 	"Click on the red clock to complete the task":"單擊紅色時鐘完成任務",
 	"Week":"週",
 	"tasks completed":"任務完成",
-	"Go back to the dashboard":"返回儀表板"
+	"Go back to the dashboard":"返回儀表板",
+	"Ain't it amazing?":"這不是很棒嗎？",
+	"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.":"我的意思是窗外的景色。即使它過於都市化或過於工業化，你也可以在幾何學中找到好奇的美。",
+	"Components":"組件",
+	"Can you name all the Webix components that have been used to build the demo app?":"您能說出用於構建演示應用程序的所有Webix組件嗎？",
+	"We miss you":"我們想念你",
+	"Been pretty busy lately, haven't you? That's great! But also do not forget about us.":"你最近一直很忙，不是嗎？那很棒！但別忘了我們。",
+	"Have a nice day":"祝你今天愉快！",
+	"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.":"親愛的顧客,無論何時閱讀此訊息,我們都祝你聖誕快樂。祝你好運和成功。",
+	"Colors and Languages":"顏色和語言",
+	"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.":"要為演示應用選擇語言或顏色主題,清單擊右上角的頭像。",
+	"We love you":"我們愛你",
+	"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally.":"親愛的客戶，我們非常愛你。如果我們的感受是相互的，請聯繫我們並下載Webix。然後我們會永遠愛你。"
 };

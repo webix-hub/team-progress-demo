@@ -67,5 +67,17 @@ export default {
 	"Click on the red clock to complete the task":"작업을 완료하려면 빨간색 시계를 클릭하십시오.",
 	"Week":"주",
 	"tasks completed":"작업 완료 됨",
-	"Go back to the dashboard":"대시 보드로 돌아 가기"
+	"Go back to the dashboard":"대시 보드로 돌아 가기",
+	"Ain't it amazing?":"놀랍지 않니?",
+	"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.":"너의 창문을 들여다 봐라. 풍경이 너무 도시 적이거나 산업적이라 할지라도 여전히 지형의 아름다움을 볼 수 있습니다.",
+	"Components":"구성 요소",
+	"Can you name all the Webix components that have been used to build the demo app?":"데모 응용 프로그램을 빌드하는 데 사용 된 모든 Webix 구성 요소의 이름을 지정하십시오.",
+	"We miss you":"우리는 당신을 그리워합니다.",
+	"Been pretty busy lately, haven't you? That's great! But also do not forget about us.":"요즘 꽤 바빴어, 안 그래? 멋지다! 그러나 또한 우리를 잊지 마십시오.",
+	"Have a nice day":"좋은 하루 되세요.",
+	"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.":"친애하는 고객, 당신이 이것을 읽고있을 때마다, 우리는 당신에게 즐거운 하루 되시기를 바랍니다. 행운과 성공이 당신을 기다리고 있습니다.",
+	"Colors and Languages":"색상 및 언어",
+	"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.":"데모 응용 프로그램의 언어 또는 색상 테마를 선택하려면 오른쪽 상단에있는 아바타를 클릭하십시오.",
+	"We love you":"우리는 너를 사랑해",
+	"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally.":"친애하는 고객, 우리는 당신을 아주 사랑합니다. 동일하다고 생각되면 Webix에 문의하십시오. 그러면 우리가 너를 영원히 사랑할 것이다."
 };

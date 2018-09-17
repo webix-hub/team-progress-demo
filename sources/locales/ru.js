@@ -67,5 +67,17 @@ export default {
 	"Click on the red clock to complete the task":"Кликните на красные часы слева, чтобы закрыть задачу",
 	"Week":"Неделя",
 	"tasks completed":"заданий выполнено",
-	"Go back to the dashboard":"Вернуться к дашборду"
+	"Go back to the dashboard":"Вернуться к дашборду",
+	"Ain't it amazing?":"Ну прелесть же!",
+	"Meaning the view from your window. Even if it's too urban or too industrial to your taste, you can find curious beauty in its geometry.":"Выгляните в окно. Даже если вид из него слишком городской или промышленный, вы без труда сможете рассмотреть затейливую красоту его геометрии.",
+	"Components":"Компоненты",
+	"Can you name all the Webix components that have been used to build the demo app?":"А вы сможете назвать все виджеты, из которых построена эта демка?",
+	"We miss you":"Мы скучаем по вам",
+	"Been pretty busy lately, haven't you? That's great! But also do not forget about us.":"Занятая выдалась неделька? Так держать! Но и о нас тоже не забывайте.",
+	"Have a nice day":"Хорошего вам дня",
+	"Dear client, whenever you are reading this, we wish you a merry day. May luck and success attend you.":"Дорогие клиенты, если вы читаете это, значит мы желаем вам веселого дня. И да пребудут с вами удача и успех.",
+	"Colors and Languages":"Цвета и языки",
+	"To pick a language or the color theme for the demo app, click on the avatar in the top right corner.":"Чтобы изменить цвета и язык демки, кликните по картинке в верхнем правом углу.",
+	"We love you":"Мы вас любим",
+	"Dear client, we love you very much. If our feelings are mutual, contact us and download Webix. Then we will love you eternally.":"Дорогие клиенты, вы вас очень любим. Если наши чувства взаимны, напишите нам и скачайте Webix. Тогда мы будем любить вас вечно."
 };
