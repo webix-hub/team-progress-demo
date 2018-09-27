@@ -50,7 +50,7 @@ export default class ToolbarView extends JetView{
 													if (lookup && code === 13){
 														const nav_btn = this.$scope.$$("favs");
 														if (nav_btn.config.icon.indexOf("check") !== -1){
-															nav_btn.config.icon = "view-dashboard";
+															nav_btn.config.icon = "mdi mdi-view-dashboard";
 															nav_btn.config.tooltip = "Go back to the dashboard";
 															nav_btn.refresh();
 														}
@@ -60,13 +60,13 @@ export default class ToolbarView extends JetView{
 											}
 										},
 										{
-											view:"icon", icon:"close", css:"close",
+											view:"icon", icon:"mdi mdi-close", css:"close",
 											click:() => this.toggleBatches("default","search")
 										}
 									]
 								},
 								{
-									view:"icon", icon:"magnify",
+									view:"icon", icon:"mdi mdi-magnify",
 									tooltip:_("Click to search a task"),
 									click:() => {
 										const lookup = this.$$("lookup").getValue();
@@ -77,7 +77,7 @@ export default class ToolbarView extends JetView{
 									}
 								},
 								{
-									view:"icon", icon:"bookmark-check",
+									view:"icon", icon:"mdi mdi-bookmark-check",
 									tooltip:_("Open the list of all tasks"),
 									localId:"favs", batch:"default",
 									click:function(){
@@ -88,7 +88,7 @@ export default class ToolbarView extends JetView{
 									}
 								},
 								{
-									view:"icon", icon:"bell", badge:2,
+									view:"icon", icon:"mdi mdi-bell", badge:2,
 									batch:"default", localId:"bell",
 									tooltip:_("View the latest notifications"),
 									click:function(){
@@ -135,11 +135,11 @@ export default class ToolbarView extends JetView{
 		const _ = this.app.getService("locale")._;
 		let nav_btn = this.$$("favs");
 		if (url[1].page === "projects"){
-			nav_btn.config.icon = "view-dashboard";
+			nav_btn.config.icon = "mdi mdi-view-dashboard";
 			nav_btn.config.tooltip = _("Go back to the dashboard");
 		}
 		else if (url[1].page === "dashboard"){
-			nav_btn.config.icon = "bookmark-check";
+			nav_btn.config.icon = "mdi mdi-bookmark-check";
 			nav_btn.config.tooltip = _("Open the list of all tasks");
 		}
 		nav_btn.refresh();

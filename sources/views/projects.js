@@ -13,11 +13,11 @@ export default class ProjectsView extends JetView {
 						onAfterSelect:id => this.app.callEvent("tasks:filter",[id])
 					},
 					data:[
-						{ id:"all", value:"All tasks", icon:"file-tree" },
-						{ id:"Support", value:"Support", icon:"lifebuoy" },
-						{ id:"AutoCat", value:"AutoCat", icon:"cat" },
-						{ id:"CompuHope", value:"CompuHope", icon:"compass" },
-						{ id:"Cubebeat", value:"Cubebeat", icon:"cube-send" }
+						{ id:"all", value:"All tasks", icon:"mdi mdi-file-tree" },
+						{ id:"Support", value:"Support", icon:"mdi mdi-lifebuoy" },
+						{ id:"AutoCat", value:"AutoCat", icon:"mdi mdi-cat" },
+						{ id:"CompuHope", value:"CompuHope", icon:"mdi mdi-compass" },
+						{ id:"Cubebeat", value:"Cubebeat", icon:"mdi mdi-cube-send" }
 					]
 				},
 				{ $subview:TasksView }
