@@ -44,29 +44,36 @@
 /* grid */
 .complete{
 	color:#1CA1C1;
-	cursor:pointer;
 }
 .incomplete{
 	color:#FF5C4C;
-	cursor:pointer;
+}
+.complete, .incomplete{
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 8px;
+}
+.tags{
+	text-align: center;
 }
 .tag{
 	border-radius:20px;
 	border:2px solid rgba(0, 0, 0, 0);
 	font-size:12px;
 	color:#fff;
+	padding: 1px 4px;
 }
 .support{
-	background-color:#8664C6;
+	background-color:#8664c6;
 }
 .compuhope{
-	background-color:#1CC123;
+	background-color:#1ca1c1;
 }
 .autocat{
-	background-color:#FFC107;
+	background-color:#fdbf4c;
 }
 .cubebeat{
-	background-color:rgb(153, 51, 102);
+	background-color:#f8643f;
 }
 /* headers (templates) */
 .webix_view.chart_header{

@@ -18,11 +18,12 @@ export default class ToolbarView extends JetView{
 					paddingY:7,
 					rows:[
 						{
+							margin:8,
 							cols:[
 								{
 									view:"label",
 									template:_("Team Progress"),
-									width:183,
+									width:175,
 									batch:"default"
 								},
 								{ 

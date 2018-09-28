@@ -33,8 +33,9 @@ export default class TasksView extends JetView {
 					template: obj => _(obj.task)
 				},
 				{
-					id:"project", fillspace:1, header:_("Project"),
-					sort:"text", editor:"select",
+					id:"project", header:_("Project"),
+					sort:"text", editor:"combo",
+					css:"tags", width:110,
 					tooltip:_("Double-click to change the project"),
 					options:projects,
 					template: obj => {
@@ -44,7 +45,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:_("User"),
-					options:persons, sort:"text", editor:"select",
+					options:persons, sort:"text", editor:"combo",
 					tooltip:_("Double-click to assign to a different employee"),
 				},
 				{
