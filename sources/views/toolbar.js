@@ -92,8 +92,11 @@ export default class ToolbarView extends JetView{
 									}
 								},
 								{
-									view:"icon", icon:"mdi mdi-bell", badge:2,
-									batch:"default", localId:"bell",
+									view:"icon",
+									icon:"mdi mdi-bell",
+									badge:5,
+									batch:"default",
+									localId:"bell",
 									tooltip:_("View the latest notifications"),
 									click:function(){
 										this.$scope.notifications.showWindow(this.$view);
