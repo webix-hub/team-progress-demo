@@ -15,7 +15,7 @@ export default class ToolbarView extends JetView{
 			elements:[
 				{ css:"logo", width:53, batch:"default" },
 				{
-					paddingY:7,
+					paddingY:5,
 					rows:[
 						{
 							margin:8,
@@ -45,6 +45,7 @@ export default class ToolbarView extends JetView{
 										{ width:11 },
 										{
 											view:"text", localId:"lookup",
+											placeholder:"Type in to look for a task",
 											on:{
 												onKeyPress(code){
 													const lookup = this.getValue();
@@ -61,7 +62,7 @@ export default class ToolbarView extends JetView{
 											}
 										},
 										{
-											view:"icon", icon:"mdi mdi-close", css:"close",
+											view:"icon", icon:"mdi mdi-close",
 											click:() => this.toggleBatches("default","search")
 										}
 									]
@@ -70,11 +71,13 @@ export default class ToolbarView extends JetView{
 									view:"icon", icon:"mdi mdi-magnify",
 									tooltip:_("Click to search a task"),
 									click:() => {
-										const lookup = this.$$("lookup").getValue();
+										const lookup = this.$$("lookup");
+										const lookuptext = this.$$("lookup").getValue();
 										if (!this.$$("search").isVisible())
 											this.toggleBatches("search","default");
 										else if (lookup)
-											this.show("projects?lookup="+lookup);
+											this.show("projects?lookup="+lookuptext);
+										lookup.focus();
 									}
 								},
 								{
