@@ -35,11 +35,11 @@ export default class TasksView extends JetView {
 				{
 					id:"project", header:_("Project"),
 					sort:"text", editor:"combo",
-					css:"tags", width:110,
+					css:"tags", width:160,
 					tooltip:_("Double-click to change the project"),
 					options:projects,
 					template: obj => {
-						return `<span class="${obj.project.toLowerCase()} 
+						return `<span class="${obj.project.split(" ").shift().toLowerCase()} 
 							tag">&nbsp;${obj.project}&nbsp;</span>`;
 					}
 				},

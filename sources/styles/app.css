@@ -49,9 +49,6 @@
 	font-size: 20px;
 	margin-top: 8px;
 }
-.tags{
-	text-align: center;
-}
 .tag{
 	border-radius:20px;
 	border:2px solid rgba(0, 0, 0, 0);
@@ -62,13 +59,13 @@
 .support{
 	background-color:#8664c6;
 }
-.compuhope{
+.quality{
 	background-color:#1ca1c1;
 }
-.autocat{
+.failure{
 	background-color:#fdbf4c;
 }
-.cubebeat{
+.data{
 	background-color:#f8643f;
 }
 /* headers (templates) */

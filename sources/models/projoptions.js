@@ -4,7 +4,7 @@ export function getProjects(){
 
 const projects = [
 	{ id:"Support", value:"Support" },
-	{ id:"AutoCat", value:"AutoCat" },
-	{ id:"CompuHope", value:"CompuHope" },
-	{ id:"Cubebeat", value:"Cubebeat" }
+	{ id:"Failure Testing", value:"Failure Testing" },
+	{ id:"Quality Management", value:"Quality Management" },
+	{ id:"Data Quality", value:"Data Quality" }
 ];

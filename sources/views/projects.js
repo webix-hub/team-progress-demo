@@ -15,9 +15,9 @@ export default class ProjectsView extends JetView {
 					data:[
 						{ id:"all", value:"All tasks", icon:"mdi mdi-file-tree" },
 						{ id:"Support", value:"Support", icon:"mdi mdi-lifebuoy" },
-						{ id:"AutoCat", value:"AutoCat", icon:"mdi mdi-cat" },
-						{ id:"CompuHope", value:"CompuHope", icon:"mdi mdi-compass" },
-						{ id:"Cubebeat", value:"Cubebeat", icon:"mdi mdi-cube-send" }
+						{ id:"Failure Testing", value:"Failure Testing", icon:"mdi mdi-monitor-cellphone-star" },
+						{ id:"Quality Management", value:"Quality Management", icon:"mdi mdi-quality-high" },
+						{ id:"Data Quality", value:"Data Quality", icon:"mdi mdi-database-check" }
 					]
 				},
 				{ $subview:TasksView }

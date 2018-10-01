@@ -47,7 +47,7 @@ export default class CompareView extends JetView {
 							}
 						}
 					],
-					padding:{ left:100, top:5, bottom:44 }
+					padding:{ left:140, top:5, bottom:44 }
 				}
 			]
 		};

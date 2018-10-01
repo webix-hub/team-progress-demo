@@ -13,7 +13,7 @@ export default class TimeView extends JetView {
 					type:"donut",
 					value:"#hours#",
 					color:"#color#",
-					innerRadius:65,
+					innerRadius:56,
 					shadow:0,
 					lineColor:obj => obj.color,
 					tooltip:{
