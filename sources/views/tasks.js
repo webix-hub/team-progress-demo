@@ -9,11 +9,13 @@ export default class TasksView extends JetView {
 		const persons = getPersons();
 		const projects = getProjects();
 		const date_format = webix.Date.dateToStr("%d %M %y");
+
 		return {
 			view:"datatable",
-			gravity:2,
+			gravity:3,
 			select:"multiselect",
-			editable:true, editaction:"dblclick",
+			editable:true,
+			editaction:"dblclick",
 			tooltip:true,
 			columns:[
 				{
@@ -39,8 +41,7 @@ export default class TasksView extends JetView {
 					tooltip:_("Double-click to change the project"),
 					options:projects,
 					template: obj => {
-						return `<span class="${obj.project.split(" ").shift().toLowerCase()} 
-							tag">&nbsp;${obj.project}&nbsp;</span>`;
+						return `<span class="${obj.project.split(" ").shift().toLowerCase()} tag">&nbsp;${obj.project}&nbsp;</span>`;
 					}
 				},
 				{

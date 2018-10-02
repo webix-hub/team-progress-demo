@@ -38,10 +38,10 @@ export default class StatisticsView extends JetView{
 							value:"#tasks17#",
 							disableLines:false,
 							item:{
-								borderColor:"#1CA1C1", borderWidth:2,
+								borderColor:"#8664C6", borderWidth:2,
 								radius:4
 							},
-							line:{ color:"#1CA1C1", width:2 },
+							line:{ color:"#8664C6", width:2 },
 							tooltip:{
 								template:_("Week") + " #week#<br>#tasks17# "
 									+ _("tasks completed")
@@ -50,9 +50,9 @@ export default class StatisticsView extends JetView{
 						{
 							value:"#tasks18#",
 							item:{
-								borderColor:"#8664C6", borderWidth:2, radius:4
+								borderColor:"#1CA1C1", borderWidth:2, radius:4
 							},
-							line:{ color:"#8664C6", width:2 },
+							line:{ color:"#1CA1C1", width:2 },
 							tooltip:{
 								template:_("Week") + " #week#<br>#tasks18# "
 								+ _("tasks completed")

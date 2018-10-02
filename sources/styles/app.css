@@ -32,6 +32,9 @@
 .logo{
 	background:url(webix.svg) 12px 4px no-repeat;
 }
+.webix_el_label.main_label{
+	line-height:36px;
+}
 .mainphoto{
 	border-radius:25px;
 	width:42px;
@@ -48,6 +51,9 @@
 	cursor: pointer;
 	font-size: 20px;
 	margin-top: 8px;
+}
+#datatable1538415083071 > div.webix_ss_body > div.webix_ss_center > div > div.webix_column.tags > div:nth-child(1) > span{
+	vertical-align: middle;
 }
 .tag{
 	border-radius:20px;

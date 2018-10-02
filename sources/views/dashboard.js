@@ -29,7 +29,8 @@ export default class DashboardView extends JetView{
 							]
 						}
 					]
-				}
+				},
+				{ width:1 }
 			]
 		};
 	}

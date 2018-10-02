@@ -24,6 +24,7 @@ export default class ToolbarView extends JetView{
 									view:"label",
 									template:_("Team Progress"),
 									width:175,
+									css:"main_label",
 									batch:"default"
 								},
 								{ 
@@ -107,7 +108,7 @@ export default class ToolbarView extends JetView{
 					]
 				},
 				{
-					template:`<image class="mainphoto" src="data/photos/micha.jpg" title="${_("Change your personal settings")}">`,
+					template:`<image class="mainphoto" src="data/photos/dottie.jpg" title="${_("Change your personal settings")}">`,
 					width:60,
 					borderless:true,
 					batch:"default",
