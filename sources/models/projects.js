@@ -3,8 +3,8 @@ export function getProjects(){
 }
 
 const projects = [
-	{ tasks17:"60", tasks18:"75", project:"Testing" },
-	{ tasks17:"60", tasks18:"74", project:"Management" },
-	{ tasks17:"86", tasks18:"77", project:"Support" },
-	{ tasks17:"53", tasks18:"80", project:"Data Quality" }
+	{ tasks17:"49", tasks18:"73", project:"Testing" },
+	{ tasks18:"49", tasks17:"29", project:"Management" },
+	{ tasks17:"79", tasks18:"45", project:"Support" },
+	{ tasks17:"29", tasks18:"48", project:"Data Quality" }
 ];

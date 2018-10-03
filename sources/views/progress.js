@@ -9,6 +9,7 @@ export default class ProgressView extends JetView {
 				{ template:_("Individual employee's progress"), type:"header", css:"webix_header chart_header" },
 				{
 					view:"chart",
+					border:true,
 					localId:"progress",
 					type:"splineArea",
 					value:"#tasks#",

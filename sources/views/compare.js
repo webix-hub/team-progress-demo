@@ -15,7 +15,6 @@ export default class CompareView extends JetView {
 					type:"barH",
 					radius:0,
 					barWidth:16,
-					border:false,
 					yAxis:{
 						template:"#project#", lines:false, color:"#EDEFF0"
 					},
