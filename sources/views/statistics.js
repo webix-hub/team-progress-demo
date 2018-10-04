@@ -39,7 +39,7 @@ export default class StatisticsView extends JetView{
 							disableLines:false,
 							item:{
 								borderColor:"#8664C6", borderWidth:2,
-								radius:4
+								radius:3
 							},
 							line:{ color:"#8664C6", width:2 },
 							tooltip:{
@@ -50,7 +50,7 @@ export default class StatisticsView extends JetView{
 						{
 							value:"#tasks18#",
 							item:{
-								borderColor:"#1CA1C1", borderWidth:2, radius:4
+								borderColor:"#1CA1C1", borderWidth:2, radius:3
 							},
 							line:{ color:"#1CA1C1", width:2 },
 							tooltip:{
