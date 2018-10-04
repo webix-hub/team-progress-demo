@@ -26,7 +26,7 @@ export default class NotificationPopup extends JetView {
 				onHide:() => {
 					const list = this.$$("list");
 					list.clearAll();
-					list.showOverlay("<div style='margin:20px; font-size:14px;'>No new notifications</div>");
+					list.showOverlay(`<div style='margin:20px; font-size:14px;'>${_("No new notifications")}</div>`);
 					list.define({ height:80 });
         			list.resize();
 					this.app.callEvent("read:notifications");

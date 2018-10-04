@@ -1,4 +1,5 @@
 export default {
+	"No new notifications":"没有新的通知",
 	"Team Progress":"团队進步",
 	"Add a task":"添加任務",
 	"Click to search a task":"单机以搜索任務",

@@ -1,4 +1,5 @@
 export default {
+	"No new notifications":"No hay nuevas notificaciones",
 	"Team Progress":"Progreso del equipo",
 	"Add a task":"Añadir una tarea",
 	"Click to search a task":"Haga clic para buscar una tarea",

@@ -31,7 +31,7 @@ export default class ToolbarView extends JetView{
 									view:"button",
 									type:"form",
 									label:_("Add a task"),
-									width:160,
+									autowidth:true,
 									inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()

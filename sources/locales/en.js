@@ -1,4 +1,5 @@
 export default {
+	"No new notifications":"No new notifications",
 	"Team Progress":"Team Progress",
 	"Add a task":"Add a task",
 	"Click to search a task":"Click to search a task",

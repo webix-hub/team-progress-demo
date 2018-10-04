@@ -1,4 +1,5 @@
 export default {
+	"No new notifications":"Keine Nachrichten",
 	"Team Progress":"Team Fortschritt",
 	"Add a task":"Aufgabe hinzuаügen",
 	"Click to search a task":"Klicken Sie, um nach einer Aufgabe zu suchen",
