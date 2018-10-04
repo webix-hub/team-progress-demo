@@ -83,8 +83,9 @@
 }
 .notifications .webix_list_item .m_title{
 	font-weight:500;
+	color:#313131;
 }
 .notifications .webix_list_item .message{
 	display:block;
-	color:#94A1B3;
+	color:#475466;
 }
