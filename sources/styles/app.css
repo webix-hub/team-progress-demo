@@ -39,6 +39,10 @@
 	border-radius:25px;
 	width:42px;
 	height:42px;
+	cursor:pointer;
+}
+.mainphoto:hover{
+	opacity:0.8;
 }
 /* grid */
 .complete{
