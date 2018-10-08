@@ -23,8 +23,8 @@ export default class CompareView extends JetView {
 					},
 					legend:{
 						values:[
-							{ text:"2017",color:"#8664C6" },
-							{ text:"2018",color:"#1CA1C1" }
+							{ text:new Date().getFullYear()-1,color:"#8664C6" },
+							{ text:new Date().getFullYear(),color:"#1CA1C1" }
 						],
 						valign:"bottom", align:"right", layout:"x",
 						margin:4, padding:10,

@@ -24,8 +24,8 @@ export default class StatisticsView extends JetView{
 					},
 					legend:{
 						values:[
-							{ text:"2017", color:"#8664C6" },
-							{ text:"2018", color:"#1CA1C1" }
+							{ text:new Date().getFullYear()-1, color:"#8664C6" }, 
+							{ text:new Date().getFullYear(), color:"#1CA1C1" }
 						],
 						align:"right", layout:"x", valign:"bottom",
 						margin:4, padding:10,
