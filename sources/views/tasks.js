@@ -42,6 +42,9 @@ export default class TasksView extends JetView {
 					tooltip:_("Double-click to change the project"),
 					options:projects,
 					template: obj => {
+						if (this.getUrl()[0].page === "dashboard")
+						return obj.project;
+						else
 						return `<span class="${obj.project.split(" ").shift().toLowerCase()} tag">&nbsp;${obj.project}&nbsp;</span>`;
 					}
 				},
