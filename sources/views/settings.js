@@ -1,5 +1,11 @@
 import {JetView} from "webix-jet";
 
+import "locales/webix/de.js";
+import "locales/webix/es.js";
+import "locales/webix/ko.js";
+import "locales/webix/ru.js";
+import "locales/webix/zh.js";
+
 export default class SettingsPopup extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
