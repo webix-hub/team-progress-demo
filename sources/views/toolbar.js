@@ -95,7 +95,7 @@ export default class ToolbarView extends JetView{
 								{
 									view:"icon",
 									icon:"mdi mdi-bell",
-									badge:5,
+									badge:3,
 									batch:"default",
 									localId:"bell",
 									tooltip:_("View the latest notifications"),

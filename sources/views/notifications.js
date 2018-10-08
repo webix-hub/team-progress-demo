@@ -13,7 +13,6 @@ export default class NotificationPopup extends JetView {
 				borderless:true,
 				css:"notifications",
 				width:250,
-				height:385,
 				template:obj => {
 					return "<span class='m_title'>"+ _(obj.title) + "</span>" +
 						"<span class='message'>" + _(obj.message) + "</span>";
@@ -43,7 +42,7 @@ export default class NotificationPopup extends JetView {
 		this.on(this.app,"new:notification",() => {
 			list.hideOverlay();
 			list.add(newNotification(),0);
-			list.define({ height:list.count()*104 });
+			list.define({ height:list.count()*84 });
         	list.resize();
 		});
 	}
