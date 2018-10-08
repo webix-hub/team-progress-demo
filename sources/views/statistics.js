@@ -11,6 +11,7 @@ export default class StatisticsView extends JetView{
 					localId:"stats",
 					view:"chart",
 					type:"scatter",
+					height:345,
 					xValue:"#week#",
 					padding:{
 						top:4, bottom:44

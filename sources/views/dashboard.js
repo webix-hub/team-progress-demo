@@ -13,22 +13,27 @@ export default class DashboardView extends JetView{
 			cols:[
 				PersonsView,
 				{
-					type:"wide",
-					rows:[
-						StatisticsView,
-						{
-							type:"wide",
-							cols:[
-								TimeView, ProgressView
-							]
-						},
-						{
-							type:"wide",
-							cols:[
-								TasksView, CompareView
-							]
-						}
-					]
+					view:"scrollview",
+					body:{
+						type:"wide",
+						rows:[
+							StatisticsView,
+							{
+								height:345,
+								type:"wide",
+								cols:[
+									TimeView, ProgressView
+								]
+							},
+							{
+								height:345,
+								type:"wide",
+								cols:[
+									TasksView, CompareView
+								]
+							}
+						]
+					}
 				},
 				{ width:1 }
 			]
