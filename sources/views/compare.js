@@ -16,7 +16,7 @@ export default class CompareView extends JetView {
 					radius:0,
 					barWidth:16,
 					yAxis:{
-						template:"#project#", lines:false, color:"#EDEFF0"
+						template:obj => _(obj.project), lines:false, color:"#EDEFF0"
 					},
 					xAxis:{
 						start:0, step:15, end:90, color:"#fff", lineColor:"#EDEFF0"

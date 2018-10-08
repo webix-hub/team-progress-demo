@@ -1,4 +1,8 @@
 export default {
+	"Testing":"Тестирование",
+	"Management":"Менеджмент",
+	"Support":"Поддержка",
+	"Data Quality":"Качество данных",
 	"No new notifications":"Нет новых уведомлений",
 	"Team Progress":"Прогресс команды",
 	"Add a task":"Добавить задачу",

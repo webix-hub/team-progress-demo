@@ -1,4 +1,8 @@
 export default {
+	"Testing":"测试",
+	"Management":"管理",
+	"Support":"援助",
+	"Data Quality":"数据质量",
 	"No new notifications":"没有新的通知",
 	"Team Progress":"团队進步",
 	"Add a task":"添加任務",
