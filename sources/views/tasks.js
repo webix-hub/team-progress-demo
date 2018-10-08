@@ -2,6 +2,7 @@ import {JetView} from "webix-jet";
 import {tasks} from "models/tasks";
 import {getPersons} from "models/persoptions";
 import {getProjects} from "models/projoptions";
+import {getLangsList} from "models/langslist";
 
 export default class TasksView extends JetView {
 	config(){
@@ -87,6 +88,13 @@ export default class TasksView extends JetView {
 	}
 	init(view,url){
 		view.sync(tasks);
+
+		const lang = this.app.getService("locale").getLang();
+		if (lang !== "en"){
+			const langs = getLangsList();
+			const country = langs.find(l => l.id === lang).code;
+			webix.i18n.setLocale(lang+"-"+country);
+		}
 
 		this.on(this.app,"person:select",person => {
 			let res = tasks.find((obj) => person.id == obj.user);

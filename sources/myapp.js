@@ -21,7 +21,7 @@ if (!BUILD_AS_MODULE){
 		if (!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
 			webix.CustomScroll.init();
 		const app = new MyApp();
-		app.use(plugins.Locale);
+		app.use(plugins.Locale,{ storage:webix.storage.local });
 		app.render();
 	});
 }

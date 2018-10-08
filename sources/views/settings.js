@@ -1,4 +1,5 @@
 import {JetView} from "webix-jet";
+import {getLangsList} from "models/langslist";
 
 import "locales/webix/de.js";
 import "locales/webix/es.js";
@@ -39,14 +40,7 @@ export default class SettingsPopup extends JetView {
 						view:"combo", localId:"langs",
 						label:_("Pick a language"),
 						labelPosition:"top", value:lang,
-						options:[
-							{ id:"en", code:"US", value:"English" },
-							{ id:"zh", code:"CN", value:"中文" },
-							{ id:"es", code:"ES", value:"Español" },
-							{ id:"ko", code:"KR", value:"한국어" },
-							{ id:"ru", code:"RU", value:"Русский" },
-							{ id:"de", code:"DE", value:"Deutsch" }
-						],
+						options:getLangsList(),
 						on:{
 							onChange:function(newlang){
 								const country = this.getList().getItem(newlang).code;
