@@ -14,19 +14,20 @@ export default class DashboardView extends JetView{
 				PersonsView,
 				{
 					view:"scrollview",
+					borderless:true,
 					body:{
 						type:"wide",
 						rows:[
 							StatisticsView,
 							{
-								height:345,
+								height:300,
 								type:"wide",
 								cols:[
 									TimeView, ProgressView
 								]
 							},
 							{
-								height:345,
+								height:300,
 								type:"wide",
 								cols:[
 									TasksView, CompareView
