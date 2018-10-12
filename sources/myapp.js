@@ -1,27 +1,27 @@
 import "./styles/app.css";
-import { JetApp, EmptyRouter, HashRouter, plugins } from "webix-jet";
+import { JetApp, HashRouter, plugins } from "webix-jet";
 
 export default class MyApp extends JetApp{
 	constructor(config){
 		const defaults = {
 			id		: APPNAME,
 			version : VERSION,
-			router 	: BUILD_AS_MODULE ? EmptyRouter : HashRouter,
+			router 	: HashRouter,
 			debug 	: !PRODUCTION,
 			start 	: "/top/dashboard",
 			theme	: webix.storage.local.get("curr_theme_team_progress") || ""
 		};
 
 		super({ ...defaults, ...config });
+
+		this.use(plugins.Locale,{ storage:webix.storage.local });
 	}
 }
 
 if (!BUILD_AS_MODULE){
 	webix.ready(() => {
-		if (!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
+		if (!webix.env.touch && webix.env.scrollSize && webix.CustomScroll)
 			webix.CustomScroll.init();
-		const app = new MyApp();
-		app.use(plugins.Locale,{ storage:webix.storage.local });
-		app.render();
+		new MyApp().render();
 	});
 }
