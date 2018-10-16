@@ -1,7 +1,7 @@
 Team Progress Demo App (for the new Webix skin)
 ===================
 
-The project on invision: https://projects.invisionapp.com/d/main#/console/12386541/313827076/preview
+A demo that allows viewing and controlling the working progress of a team.
 
 ### How to run
 
