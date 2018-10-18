@@ -25,3 +25,12 @@ if (!BUILD_AS_MODULE){
 		new MyApp().render();
 	});
 }
+
+//track js errors
+if (PRODUCTION){
+	window.Raven
+		.config(
+			"https://59d0634de9704b61ba83823ec3bf4787@sentry.webix.io/12"
+		)
+		.install();
+}
