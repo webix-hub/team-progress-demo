@@ -5,6 +5,8 @@ export default class TimeView extends JetView {
 		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean",
+			width:410,
+			height:300,
 			rows:[
 				{ template:_("Hours spent, %"), type:"header", css:"webix_header chart_header" },
 				{
@@ -13,7 +15,7 @@ export default class TimeView extends JetView {
 					type:"donut",
 					value:"#hours#",
 					color:"#color#",
-					innerRadius:56,
+					innerRadius:64,
 					shadow:0,
 					lineColor:obj => obj.color,
 					tooltip:{
@@ -35,9 +37,9 @@ export default class TimeView extends JetView {
 			]
 		};
 	}
-	init(){
+	init(view){
 		this.on(this.app,"person:select",person => {
-			this.$$("hours").parse(webix.copy(person.hours));
+			view.queryView({ view:"chart" }).parse(webix.copy(person.hours));
 		});
 	}
 }

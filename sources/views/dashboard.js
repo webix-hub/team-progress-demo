@@ -20,10 +20,16 @@ export default class DashboardView extends JetView{
 						rows:[
 							StatisticsView,
 							{
-								height:300,
+								id:"time-and-progress-layout",
 								type:"wide",
-								cols:[
-									TimeView, ProgressView
+								rows:[
+									{
+										type:"wide",
+										responsive:"time-and-progress-layout",
+										cols:[
+											TimeView, ProgressView
+										]
+									}
 								]
 							},
 							{
