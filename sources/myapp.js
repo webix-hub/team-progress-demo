@@ -15,6 +15,10 @@ export default class MyApp extends JetApp{
 		super({ ...defaults, ...config });
 
 		this.use(plugins.Locale,{ storage:webix.storage.local });
+
+		this.attachEvent("app:error:resolve", function(err, url) {
+			webix.delay(() => this.show("/top/dashboard"));
+		});
 	}
 }
 
