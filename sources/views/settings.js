@@ -33,7 +33,7 @@ export default class SettingsPopup extends JetView {
 								this.app.config.theme = theme;
 								webix.storage.local.put("curr_theme_team_progress", theme);
 								webix.delay(() => {
-									this.app.refresh();
+									if (this.app) this.app.refresh();
 								},this,null,500);
 							}
 						}
