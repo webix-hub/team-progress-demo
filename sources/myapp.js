@@ -3,18 +3,30 @@ import { JetApp, HashRouter, plugins } from "webix-jet";
 
 export default class MyApp extends JetApp{
 	constructor(config){
+		let theme = "";
+		let cookies = true;
+		try{
+			theme = webix.storage.local.get("curr_theme_team_progress");
+		}
+		catch(err){
+			cookies = false;
+			webix.message("You disabled cookies, so the theme won't be restored after page reloads.","debug");
+		}
 		const defaults = {
 			id		: APPNAME,
 			version : VERSION,
 			router 	: HashRouter,
 			debug 	: !PRODUCTION,
 			start 	: "/top/dashboard",
-			theme	: window.localStorage ? (webix.storage.local.get("curr_theme_team_progress") || "") : ""
+			theme	: theme || ""
 		};
 
 		super({ ...defaults, ...config });
 
-		this.use(plugins.Locale,{ storage:webix.storage.local });
+		let localeConfig = {};
+		if (cookies)
+			localeConfig.storage = webix.storage.local
+		this.use(plugins.Locale,localeConfig);
 
 		this.attachEvent("app:error:resolve", function(err, url) {
 			webix.delay(() => this.show("/top/dashboard"));
