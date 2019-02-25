@@ -35,6 +35,9 @@
 .webix_el_label.main_label{
 	line-height:36px;
 }
+.webix_el_label.main_label .webix_el_box{
+	font-size:16px;
+}
 .mainphoto{
 	border-radius:25px;
 	width:42px;

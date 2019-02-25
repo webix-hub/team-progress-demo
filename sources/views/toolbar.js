@@ -22,7 +22,7 @@ export default class ToolbarView extends JetView{
 							cols:[
 								{
 									view:"label",
-									template:_("Team Progress"),
+									label:_("Team Progress"),
 									width:175,
 									css:"main_label",
 									batch:"default"
@@ -83,7 +83,6 @@ export default class ToolbarView extends JetView{
 								},
 								{
 									view:"icon", icon:"mdi mdi-bookmark-check",
-									tooltip:_("Open the list of all tasks"),
 									localId:"favs", batch:"default",
 									click:function(){
 										if (this.config.icon.indexOf("check") !== -1)
@@ -108,8 +107,8 @@ export default class ToolbarView extends JetView{
 					]
 				},
 				{
-					template:`<image class="mainphoto" src="data/photos/dottie.jpg" title="${_("Change your personal settings")}">`,
-					width:60,
+					template:`<image class="mainphoto" src="data/photos/dottie.jpg" webix_tooltip="${_("Change your personal settings")}">`,
+					width:60, localId:"avatar",
 					borderless:true,
 					batch:"default",
 					onClick:{
@@ -140,17 +139,19 @@ export default class ToolbarView extends JetView{
 				}
 			},10000);
 		});
+
+		webix.TooltipControl.addTooltip(this.$$("avatar").$view);
 	}
 	urlChange(ui,url){
 		const _ = this.app.getService("locale")._;
 		let nav_btn = this.$$("favs");
 		if (url[1].page === "projects"){
 			nav_btn.config.icon = "mdi mdi-view-dashboard";
-			nav_btn.config.tooltip = _("Go back to the dashboard");
+			nav_btn.define("tooltip",_("Go back to the dashboard"));
 		}
 		else if (url[1].page === "dashboard"){
 			nav_btn.config.icon = "mdi mdi-bookmark-check";
-			nav_btn.config.tooltip = _("Open the list of all tasks");
+			nav_btn.define("tooltip",_("Open the list of all tasks"));
 		}
 		nav_btn.refresh();
 	}
