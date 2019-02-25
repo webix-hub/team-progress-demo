@@ -134,7 +134,7 @@ export default class TasksView extends JetView {
 		const param = this.getParam("lookup");
 		if (param)
 			this.getRoot().filter(obj => {
-				if (obj.task.toLowerCase().indexOf(param) !== -1) return true;
+				return (obj.task.toLowerCase().indexOf(param) !== -1);
 			});
 	}
 }

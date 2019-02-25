@@ -25,10 +25,10 @@ export default class MyApp extends JetApp{
 
 		let localeConfig = {};
 		if (cookies)
-			localeConfig.storage = webix.storage.local
+			localeConfig.storage = webix.storage.local;
 		this.use(plugins.Locale,localeConfig);
 
-		this.attachEvent("app:error:resolve", function(err, url) {
+		this.attachEvent("app:error:resolve", function() {
 			webix.delay(() => this.show("/top/dashboard"));
 		});
 	}
