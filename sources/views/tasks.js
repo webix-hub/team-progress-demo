@@ -91,6 +91,9 @@ export default class TasksView extends JetView {
 	}
 	init(view,url){
 		view.sync(tasks);
+		tasks.waitData.then(() => {
+			this.app.callEvent("tasks:loaded");
+		});
 
 		const lang = this.app.getService("locale").getLang();
 		if (lang !== "en"){
