@@ -37,7 +37,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"project", header:_("Project"),
-					sort:"text", editor:"combo",
+					sort:"text", editor:"richselect",
 					css:"tags", width:170,
 					tooltip:_("Double-click to change the project"),
 					options:projects,
@@ -50,7 +50,7 @@ export default class TasksView extends JetView {
 				},
 				{
 					id:"user", fillspace:1, header:_("User"),
-					options:persons, sort:"text", editor:"combo",
+					options:persons, sort:"text", editor:"richselect",
 					tooltip:_("Double-click to assign to a different employee"),
 				},
 				{
