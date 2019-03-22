@@ -27,7 +27,7 @@ export default class ToolbarView extends JetView{
 									css:"main_label",
 									batch:"default"
 								},
-								{ 
+								{
 									view:"button",
 									type:"form",
 									label:_("Add a task"),
@@ -50,14 +50,14 @@ export default class ToolbarView extends JetView{
 											on:{
 												onKeyPress(code){
 													const lookup = this.getValue();
-													if (lookup && code === 13){
+													if (code === 13){
 														const nav_btn = this.$scope.$$("favs");
 														if (nav_btn.config.icon.indexOf("check") !== -1){
 															nav_btn.config.icon = "mdi mdi-view-dashboard";
 															nav_btn.config.tooltip = "Go back to the dashboard";
 															nav_btn.refresh();
 														}
-														this.$scope.show("projects?lookup="+lookup);
+														this.$scope.show("projects" + (lookup ? "?lookup="+lookup : ""));
 													}
 												}
 											}

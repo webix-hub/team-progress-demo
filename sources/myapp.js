@@ -23,7 +23,16 @@ export default class MyApp extends JetApp{
 
 		super({ ...defaults, ...config });
 
-		let localeConfig = {};
+		let localeConfig = {
+			webix:{
+				en:"en-US",
+				zh:"zh-CN",
+				es:"es-ES",
+				ko:"ko-KR",
+				ru:"ru-RU",
+				de:"de-DE"
+			}
+		};
 		if (cookies)
 			localeConfig.storage = webix.storage.local;
 		this.use(plugins.Locale,localeConfig);

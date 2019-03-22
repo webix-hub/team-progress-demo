@@ -8,7 +8,7 @@ export default class TimeView extends JetView {
 			width:410,
 			height:300,
 			rows:[
-				{ template:_("Hours spent, %"), type:"header", css:"webix_header chart_header" },
+				{ template:_("Hours spent, %"), type:"header", css:"chart_header" },
 				{
 					localId:"hours",
 					view:"chart",

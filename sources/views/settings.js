@@ -13,7 +13,7 @@ export default class SettingsPopup extends JetView {
 		const lang = this.app.getService("locale").getLang();
 
 		let curr_theme = this.app.config.theme ? 1 : 0;
-		
+
 		return {
 			view:"popup",
 			body:{
@@ -48,8 +48,7 @@ export default class SettingsPopup extends JetView {
 						options:getLangsList(),
 						on:{
 							onChange:function(newlang){
-								const country = this.getList().getItem(newlang).code;
-								this.$scope.toggleLanguage(newlang,country);
+								this.$scope.toggleLanguage(newlang);
 							}
 						}
 					}
@@ -57,9 +56,8 @@ export default class SettingsPopup extends JetView {
 			}
 		};
 	}
-	toggleLanguage(newlang,country){
+	toggleLanguage(newlang){
 		const langs = this.app.getService("locale");
-		webix.i18n.setLocale(newlang+"-"+country);
 		webix.delay(() => langs.setLang(newlang));
 	}
 	showWindow(pos){

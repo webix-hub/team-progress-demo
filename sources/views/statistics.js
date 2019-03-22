@@ -6,7 +6,7 @@ export default class StatisticsView extends JetView{
 		const _ = this.app.getService("locale")._;
 		return {
 			type:"clean", rows:[
-				{ template:_("Total tasks completed"), type:"header", css:"webix_header chart_header" },
+				{ template:_("Total tasks completed"), type:"header", css:"chart_header" },
 				{
 					localId:"stats",
 					view:"chart",

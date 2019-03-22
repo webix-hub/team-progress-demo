@@ -93,6 +93,7 @@ export default class TasksView extends JetView {
 		view.sync(tasks);
 		tasks.waitData.then(() => {
 			this.app.callEvent("tasks:loaded");
+			this.filterTasks(view);
 		});
 
 		const lang = this.app.getService("locale").getLang();
@@ -133,11 +134,19 @@ export default class TasksView extends JetView {
 				view.hideOverlay();
 		});
 	}
-	urlChange(){
+	urlChange(view){
+		this.filterTasks(view);
+	}
+	filterTasks(view){
 		const param = this.getParam("lookup");
-		if (param)
-			this.getRoot().filter(obj => {
-				return (obj.task.toLowerCase().indexOf(param) !== -1);
-			});
+		view.filter(obj => {
+			return (obj.task.toLowerCase().indexOf(param || "") !== -1);
+		});
+		if (!view.count()){
+			view.showOverlay("No tasks found");
+		}
+		else {
+			view.hideOverlay();
+		}
 	}
 }

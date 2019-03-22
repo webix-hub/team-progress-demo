@@ -5750,23 +5750,10 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webix-jet@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/webix-jet/-/webix-jet-1.6.2.tgz#cb1d550492888eabdf6128682d45e9764210bf55"
-  integrity sha512-VHxF1B2sRtMMSoWQtVx4qhTNz6YPcU6zZh0acRs9WLMJjcbab40MdYBAW/lrSPyIolfY5KsGi865rrVKmY8oAg==
-  dependencies:
-    webix-polyglot "^2.3.0"
-    webix-routie "^0.4.0"
-
-webix-polyglot@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/webix-polyglot/-/webix-polyglot-2.3.0.tgz#57665ec19976ff80a0d1a6c1f59ca46a6a3466c2"
-  integrity sha512-KzzY9NdYkVD1emyWAF7xJbnNn6VnAwJOwc8KdOSL2Fr/8tszzPu+T6tGY5ZUqNbnoeYEgGbzXFXQSzRKfGV9WA==
-
-webix-routie@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/webix-routie/-/webix-routie-0.4.0.tgz#6693986e1b082d3880cc95f94eb5dd328c081a90"
-  integrity sha1-ZpOYbhsILTiAzJX5TrXdMowIGpA=
+webix-jet@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/webix-jet/-/webix-jet-2.0.4.tgz#cd9606c8fc4844459926ca7833285525f38f8390"
+  integrity sha512-UXXyJQbFr6TJCs99mLEKF01SB8lKKLLHQQHw0WzLi60m5DO+eNfWuhMk7NqH2Fs/dVNVYPLnLa0f5S+/w5D71Q==
 
 webpack-cli@^3.0.8:
   version "3.1.2"

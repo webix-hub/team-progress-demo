@@ -8,7 +8,7 @@ export default class CompareView extends JetView {
 			type:"clean",
 			gravity:2,
 			rows:[
-				{ template:_("Total tasks by projects"), type:"header", css:"webix_header chart_header" },
+				{ template:_("Total tasks by projects"), type:"header", css:"chart_header" },
 				{
 					localId:"chart",
 					view:"chart",

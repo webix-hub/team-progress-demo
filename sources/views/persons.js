@@ -12,6 +12,7 @@ export default class PersonsView extends JetView {
 					css:theme,
 					localId:"toolbar",
 					elements:[
+						{ width:8 },
 						{ view:"label", label:_("Persons") },
 						{},
 						{

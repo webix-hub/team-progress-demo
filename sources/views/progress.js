@@ -8,7 +8,7 @@ export default class ProgressView extends JetView {
 			minWidth:500,
 			height:300,
 			rows:[
-				{ template:_("Individual employee's progress"), type:"header", css:"webix_header chart_header" },
+				{ template:_("Individual employee's progress"), type:"header", css:"chart_header" },
 				{
 					view:"chart",
 					border:true,
